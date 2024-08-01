@@ -1,20 +1,25 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+/** @type {import('tailwindcss').Config} */
+export const content = [
+  './src/app/components/**/*.{js,jsx,ts,tsx}',
+  './src/app/**/*.{js,jsx,ts,tsx}'
+];
+export const theme = {
+  extend: {
+    colors: {
+      'papaya-whip': '#FFEFD5',
+      'gunmetal': '#2B3D4F',
+      'myrtle-green': '#317873',
+      'myrtle-green-light': '#3D958F',
+      'palatinate': '#682860',
+      'earth-yellow': '#E1A95F'
     },
-  },
-  plugins: [],
+    fontFamily: {
+      montserrat: ['Montserrat', 'sans-serif'],
+      lora: ['Lora', 'serif'],
+      hind: ['Hind Madurai', 'sans-serif']
+    }
+  }
 };
-export default config;
+export const plugins = [
+  require('@tailwindcss/aspect-ratio')
+];
