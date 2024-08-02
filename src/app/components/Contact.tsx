@@ -19,7 +19,7 @@ export const Contact: React.FC = () => (
             READY TO BEGIN YOUR JOURNEY?
           </h2>
           <p className="text-lg mb-8 text-papaya-whip">
-            Schedule a free consultation or reach out on LinkedIn. We'll be happy to help. Stop wasting time with things you hate and get back to the reason you started your business. The rest is our problem now. It's that simple.
+            Schedule a free consultation or reach out on LinkedIn. We&apos;ll be happy to help. Stop wasting time with things you hate and get back to the reason you started your business. The rest is our problem now. It&apos;s that simple.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link href="https://calendly.com/windroseandco/initial-consult" target="_blank" rel="noopener noreferrer">
