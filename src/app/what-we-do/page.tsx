@@ -1,13 +1,11 @@
-import Navbar from '../components/Navbar';
-import WhoWeAre from '../who-we-are/page';
-import Footer from '../components/Footer';
+import About from '../components/About';
+import YouTubeEmbed from '../components/YoutubeEmbed';
 
 export default function AboutWindrosePage() {
   return (
-    <div>
-      <Navbar />
-      <WhoWeAre />
-      <Footer />
+    <div className="bg-papaya-whip">
+      <YouTubeEmbed videoId="1X6DMEWbc9w" />
+      <About />
     </div>
   );
 }

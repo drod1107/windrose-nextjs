@@ -1,15 +1,6 @@
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import About from './components/About';
-import Footer from './components/Footer';
+// File: src/app/page.tsx
+import Home from './components/Home';
 
-export default function Home() {
-  return (
-    <div>
-      <Navbar />
-      <Header />
-      <About />
-      <Footer />
-    </div>
-  );
+export default function Page() {
+  return <Home />;
 }

@@ -4,8 +4,7 @@ import Footer from '../components/Footer';
 export default function WhoWeAre() {
   return (
     <div>
-      <Navbar />
-      <section className="text-center content-section" id="about">
+      <section className="text-center content-section px-4" id="about">
         <div className="container mx-auto">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -17,7 +16,6 @@ export default function WhoWeAre() {
           </div>
         </div>
       </section>
-      <Footer />
     </div>
   );
 }
