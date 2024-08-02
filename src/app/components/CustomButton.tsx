@@ -7,24 +7,24 @@ import { useState } from 'react';
 interface CustomButtonProps {
   text: string;
   dataHover?: string;
-  buttonStyle?: string;
+  buttonStyle?: string; // Use this to pass 'btn' or 'btn-secondary'
   newTab?: boolean;
   url?: string;
   image?: string;
   href?: string;
-  className?: string;
-  Calendar?: any;
-  LinkedIn?: any;
+  className?: string; // Additional class names
   children?: React.ReactNode;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
   text,
   dataHover,
-  buttonStyle,
+  buttonStyle = 'btn', // Default to 'btn' if no style is provided
   newTab,
   url,
   image,
+  className,
+  children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,9 +35,12 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   const buttonContent = (
     <>
       {image && <Image src={image} alt="icon" width={24} height={24} className="mr-2" />}
+      {children}
       {text}
     </>
   );
+
+  const buttonClasses = `${buttonStyle} ${className || ''}`;
 
   return (
     <>
@@ -45,7 +48,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
         <Link href={url} passHref>
           <a target={newTab ? '_blank' : '_self'}>
             <button
-              className={`${buttonStyle} px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600`}
+              className={buttonClasses}
               data-hover={dataHover}
               onClick={() => setIsOpen(false)}
             >
@@ -55,7 +58,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
         </Link>
       ) : (
         <button
-          className={`${buttonStyle} px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600`}
+          className={buttonClasses}
           data-hover={dataHover}
           onClick={() => setIsOpen(false)}
         >
