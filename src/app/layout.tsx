@@ -1,4 +1,3 @@
-// File: src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -9,8 +8,11 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Windrose & Company",
-  description: "Windrose & Company website",
+  title: {
+    default: "Windrose & Company | Business Consultancy for Startups and Solopreneurs",
+    template: "%s | Windrose & Company"
+  },
+  description: "Empowering startups and solopreneurs with business process architecture, AI enhancements, and scaling strategies. Navigate to richer waters with Windrose & Company.",
 };
 
 export default function RootLayout({
@@ -19,10 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-gunmetal mx-">
-      <body className={`${inter.className} bg-gunmetal text-papaya-whip `}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-gunmetal text-papaya-whip min-h-screen flex flex-col`}>
         <Navbar items={navbarItems} />
-        <main className="pt-16">
+        <main className="flex-grow py-16 px-5 md:px-10 lg:px-16 rounded-xl">
           {children}
         </main>
         <Footer />

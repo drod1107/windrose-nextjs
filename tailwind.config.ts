@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+
+const config: Config = {
   content: [
     './src/app/components/**/*.{js,jsx,ts,tsx}',
     './src/app/**/*.{js,jsx,ts,tsx}'
@@ -18,10 +20,30 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
         lora: ['Lora', 'serif'],
         hind: ['Hind Madurai', 'sans-serif']
+      },
+      textShadow: {
+        'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        'md': '2px 2px 4px rgba(0, 0, 0, 0.6)',
+        'lg': '3px 3px 6px rgba(0, 0, 0, 0.8)',
       }
-    }
+    },
   },
   plugins: [
-    require('@tailwindcss/aspect-ratio')
-  ]
-};
+    require('@tailwindcss/aspect-ratio'),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.text-shadow': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        },
+        '.text-shadow-md': {
+          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)',
+        },
+        '.text-shadow-lg': {
+          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.8)',
+        },
+      })
+    })
+  ],
+}
+
+export default config

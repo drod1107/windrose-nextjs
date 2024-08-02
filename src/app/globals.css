@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply font-hind bg-papaya-whip text-gunmetal;
+    @apply font-montserrat text-papaya-whip bg-gunmetal;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-montserrat text-myrtle-green;
+    @apply font-lora text-myrtle-green;
   }
   a {
     @apply text-palatinate hover:text-myrtle-green-light;
@@ -16,16 +16,16 @@
 
 @layer components {
   .btn {
-    @apply font-montserrat bg-myrtle-green text-papaya-whip px-4 py-2 rounded hover:bg-myrtle-green-light;
+    @apply font-montserrat bg-myrtle-green text-papaya-whip px-6 py-3 rounded-full hover:bg-myrtle-green-light;
   }
   .btn-secondary {
-    @apply font-montserrat bg-earth-yellow text-gunmetal px-4 py-2 rounded hover:bg-palatinate hover:text-papaya-whip;
+    @apply font-montserrat bg-earth-yellow text-gunmetal px-6 py-3 rounded-full hover:bg-palatinate hover:text-papaya-whip;
   }
 }
 
 @layer utilities {
   .text-content {
-    @apply text-gunmetal;
+    @apply text-papaya-whip;
   }
   .bg-primary {
     @apply bg-myrtle-green;
@@ -34,4 +34,3 @@
     @apply bg-earth-yellow;
   }
 }
-
