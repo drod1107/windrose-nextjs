@@ -2,10 +2,13 @@
 const nextConfig = {
     async redirects() {
       return [
-        // Redirect HTTP to HTTPS
+        // Redirect HTTP to HTTPS, except for localhost
         {
           source: '/:path*',
-          has: [{ type: 'host', value: '(?!www\\.).*' }],
+          has: [
+            { type: 'host', value: '(?!www\\.).*' },
+            { type: 'host', value: '(?!localhost).*' }
+          ],
           destination: 'https://www.:host/:path*',
           permanent: true,
         },

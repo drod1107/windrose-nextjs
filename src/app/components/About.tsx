@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link'
 import CustomButton from './CustomButton';
 import { Calendar } from 'lucide-react';
-
 const About: React.FC = () => (
   <section className="min-h-screen relative overflow-hidden flex items-center justify-center px-4 py-16" id="about">
     <div className="absolute inset-0 bg-gunmetal z-0"></div>
