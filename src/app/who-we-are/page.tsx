@@ -47,9 +47,9 @@ const WhoWeAre: React.FC = () => (
             </div>
             <div className="md:w-2/3 text-papaya-whip">
               <div className='text-lg space-y-6'>
-                <p>With an innate obsession with perfection comes a driving need to improve. We've learned from decades of working for - and with - Fortune 500 powerhouses and mom and pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
+                <p>With an innate obsession with perfection comes a driving need to improve. We&#39;ve learned from decades of working for - and with - Fortune 500 powerhouses and mom and pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
                 <p>We are a collective from diverse backgrounds including <strong>social media marketing, sales, executive function, human resources, logistics, information technology, and systems engineering</strong>.</p>
-                <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong>law, finance, advertising, and business</strong> to scale systems that let you focus on what you're great at.</p>
+                <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong>law, finance, advertising, and business</strong> to scale systems that let you focus on what you&#39;re great at.</p>
                 <p>Deeply rooted in the <strong>startup ecosystem of St. Louis, Missouri</strong>, we have access to systems that can kickstart your adventure in ways that might surprise you.</p>
                 <p>Ultimately, we harness our experience, cutting-edge technology, and AI to build <strong>people-first systems</strong> - because we believe computers are best used for empowering people to "human" better.</p>
               </div>

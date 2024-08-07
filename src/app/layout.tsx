@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { navbarItems } from "./navbarItems";
 import Footer from "./components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter, hind, montserrat, lora, saira } from './fonts';
 
 export const metadata: Metadata = {
   title: {
@@ -21,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gunmetal text-papaya-whip min-h-screen flex flex-col`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${hind.variable} ${montserrat.variable} ${lora.variable} ${saira.variable}`}>
+      <body className={`bg-gunmetal text-papaya-whip min-h-screen flex flex-col font-sans`}>
         <Navbar items={navbarItems} />
-        <main className="flex-grow py-16  rounded-xl">
+        <main className="flex-grow py-16 rounded-xl">
           {children}
         </main>
         <Footer />

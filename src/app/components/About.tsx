@@ -8,7 +8,7 @@ const About: React.FC = () => (
   <>
     <Head>
       <title>About Windrose & Company | Expert Business Consultancy</title>
-      <meta name="description" content="Discover Windrose & Company's diverse expertise in business consultancy. From startups to Fortune 500 companies, we build people-first systems using cutting-edge technology and AI." />
+      <meta name="description" content="Discover Windrose & Company&#39;s diverse expertise in business consultancy. From startups to Fortune 500 companies, we build people-first systems using cutting-edge technology and AI." />
       <meta name="keywords" content="Windrose & Company, business consultancy, startups, Fortune 500, AI, technology, St. Louis" />
       <link rel="canonical" href="https://www.windroseandcompany.com/about" />
       <meta property="og:title" content="About Windrose & Company | Expert Business Consultancy" />
@@ -37,11 +37,11 @@ const About: React.FC = () => (
                   }} />
               </div>
               <div className='md:w-2/3 text-lg text-papaya-whip space-y-6 font-hind'>
-                <p>With an innate obsession with perfection comes a driving need to improve. We've learned from decades of working for - and with - Fortune 500 powerhouses and mom and pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
+                <p>With an innate obsession with perfection comes a driving need to improve. We&#39;ve learned from decades of working for - and with - Fortune 500 powerhouses and mom and pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
                 <p>We are a collective from diverse backgrounds including <strong className="font-saira">social media marketing, sales, executive function, human resources, logistics, information technology, and systems engineering</strong>.</p>
-                <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong className="font-saira">law, finance, advertising, and business</strong> to scale systems that let you focus on what you're great at.</p>
+                <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong className="font-saira">law, finance, advertising, and business</strong> to scale systems that let you focus on what you&#39;re great at.</p>
                 <p>Deeply rooted in the <strong className="font-saira">startup ecosystem of St. Louis, Missouri</strong>, we have access to systems that can kickstart your adventure in ways that might surprise you.</p>
-                <p>Ultimately, we harness our experience, cutting-edge technology, and AI to build <strong className="font-saira">people-first systems</strong> - because we believe computers are best used for empowering people to "human" better.</p>
+                <p>Ultimately, we harness our experience, cutting-edge technology, and AI to build <strong className="font-saira">people-first systems</strong> - because we believe computers are best used for empowering people to &#34;human&#34; better.</p>
               </div>
             </div>
             <div className="mt-10 text-center">

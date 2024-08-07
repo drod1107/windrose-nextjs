@@ -28,7 +28,7 @@ export const Contact: React.FC = () => (
               READY TO BEGIN YOUR JOURNEY?
             </h2>
             <p className="text-lg mb-8 text-papaya-whip font-hind">
-              Schedule a free consultation or reach out on LinkedIn. We'll be happy to help. Stop wasting time with things you hate and get back to the reason you started your business. The rest is our problem now. It's that simple.
+              Schedule a free consultation or reach out on LinkedIn. We&#39;ll be happy to help. Stop wasting time with things you hate and get back to the reason you started your business. The rest is our problem now. It&#39;s that simple.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <CustomButton
