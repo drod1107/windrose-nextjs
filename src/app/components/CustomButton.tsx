@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 interface CustomButtonProps {
   text: string;
@@ -25,7 +25,16 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
   const buttonContent = (
     <>
-      {image && <Image src={image} alt="icon" width={24} height={24} className="mr-2" />}
+      {image && <Image
+        src={image}
+        alt="icon"
+        width={24}
+        height={24}
+        className="mr-2"
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />}
       {children}
       <span>{text}</span>
     </>

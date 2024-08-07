@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import CustomButton from './CustomButton';
 import { Linkedin, Calendar } from 'lucide-react';
 
@@ -10,13 +10,15 @@ export const Contact: React.FC = () => (
         <div className="flex flex-col lg:flex-row">
           {/* Image Column */}
           <div className="lg:w-1/2 relative">
-            <Image 
-              src="/assets/img/introbg.jpg" 
-              alt="Windrose & Company" 
-              layout="fill"
-              objectFit="cover"
+            <Image
+              src="/assets/img/introbg.jpg"
+              alt="Windrose & Company"
               className="opacity-80"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }} />
             <div className="absolute inset-0 bg-gradient-to-r from-gunmetal via-transparent to-transparent"></div>
           </div>
 

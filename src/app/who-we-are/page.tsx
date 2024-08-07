@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import CustomButton from '../components/CustomButton';
 import { Calendar } from 'lucide-react';
 import Head from 'next/head';
@@ -36,10 +36,14 @@ const WhoWeAre: React.FC = () => (
             <div className="md:w-1/3">
               <Image
                 src="/assets/img/barbe_and_david.png"
-                width={400} height={400}
+                width={400}
+                height={400}
                 alt="Barbe and David"
                 className='w-full rounded-xl shadow-lg'
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </div>
             <div className="md:w-2/3 text-papaya-whip">
               <div className='text-lg space-y-6'>

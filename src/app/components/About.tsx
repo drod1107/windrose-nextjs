@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import CustomButton from './CustomButton';
 import { Calendar } from 'lucide-react';
 import Head from 'next/head';
@@ -27,10 +27,14 @@ const About: React.FC = () => (
                 <Image
                   src="/assets/img/windroselogo.png"
                   alt="Windrose & Company Logo"
-                  width={300} height={300}
+                  width={300}
+                  height={300}
                   className='mx-auto rounded-xl shadow-lg'
                   priority
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
               </div>
               <div className='md:w-2/3 text-lg text-papaya-whip space-y-6 font-hind'>
                 <p>With an innate obsession with perfection comes a driving need to improve. We've learned from decades of working for - and with - Fortune 500 powerhouses and mom and pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
