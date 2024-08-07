@@ -27,8 +27,6 @@ const nextConfig = {
         permanent: true,
       }
     ];
-  },
-  reactStrictMode: true
-};
+  }};
 
 export default nextConfig;

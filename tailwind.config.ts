@@ -17,11 +17,12 @@ const config: Config = {
         'earth-yellow': '#E1A95F'
       },
       fontFamily: {
-        saira: ['Saira', 'sans-serif'],
-        lora: ['Lora', 'serif'],
-        hind: ['Hind Madurai', 'sans-serif'],
-        sans: ['Montserrat', 'Saira', 'sans-serif'],
-        serif: ['Lora', 'Saira', 'serif'],
+        sans: ['var(--font-montserrat)', 'var(--font-saira)', 'sans-serif'],
+        serif: ['var(--font-lora)', 'var(--font-saira)', 'serif'],
+        saira: ['var(--font-saira)', 'sans-serif'],
+        lora: ['var(--font-lora)', 'serif'],
+        hind: ['var(--font-hind)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
