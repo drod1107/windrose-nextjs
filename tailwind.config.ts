@@ -17,9 +17,11 @@ const config: Config = {
         'earth-yellow': '#E1A95F'
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        saira: ['Saira', 'sans-serif'],
         lora: ['Lora', 'serif'],
-        hind: ['Hind Madurai', 'sans-serif']
+        hind: ['Hind Madurai', 'sans-serif'],
+        sans: ['Montserrat', 'Saira', 'sans-serif'],
+        serif: ['Lora', 'Saira', 'serif'],
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',

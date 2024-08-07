@@ -6,25 +6,17 @@ interface YouTubeEmbedProps {
 
 const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId }) => {
   return (
-    <div className="w-full bg-gunmetal py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className='text-center font-bold text-4xl mb-4 text-papaya-whip'>You love your craft.</h2> 
-        <h3 className='text-center font-bold text-2xl mb-8 text-myrtle-green'>We love the rest of business.</h3>
-        <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${videoId}?si=Kdm9F_rY7TfgSXMJ&color=E1A95F`}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </div>
+      <div className="relative w-full h-full pt-[56.25%]">
+        <iframe
+          className="absolute inset-0 w-full h-full object-cover p-5"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&vq=hd1080`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"
+          allowFullScreen
+        ></iframe>
       </div>
-    </div>
+
   );
 };
 

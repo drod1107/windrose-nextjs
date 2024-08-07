@@ -1,71 +1,70 @@
 'use client';
-
 import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
+import Image from "next/image";
 
 interface CustomButtonProps {
   text: string;
   dataHover?: string;
-  buttonStyle?: string; // Use this to pass 'btn' or 'btn-secondary'
+  buttonStyle?: string;
   newTab?: boolean;
   url?: string;
   image?: string;
-  href?: string;
-  className?: string; // Additional class names
+  className?: string;
   children?: React.ReactNode;
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({
   text,
   dataHover,
-  buttonStyle = 'btn', // Default to 'btn' if no style is provided
+  buttonStyle = 'btn',
   newTab,
   url,
   image,
   className,
   children,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
   const buttonContent = (
     <>
-      {image && <Image src={image} alt="icon" width={24} height={24} className="mr-2" />}
+      {image && <Image
+        src={image}
+        alt="icon"
+        width={24}
+        height={24}
+        className="mr-2"
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />}
       {children}
-      {text}
+      <span>{text}</span>
     </>
   );
 
-  const buttonClasses = `${buttonStyle} ${className || ''}`;
+  const baseClasses = "inline-flex items-center justify-center px-4 py-2 rounded-md transition duration-300 ease-in-out";
+  const buttonClasses = `${baseClasses} ${buttonStyle} ${className || ''}`;
+
+  const commonProps = {
+    className: buttonClasses,
+    'data-hover': dataHover,
+  };
+
+  if (url) {
+    return (
+      <Link 
+        href={url}
+        target={newTab ? '_blank' : undefined}
+        rel={newTab ? 'noopener noreferrer' : undefined}
+        {...commonProps}
+      >
+        {buttonContent}
+      </Link>
+    );
+  }
 
   return (
-    <>
-      {url ? (
-        <Link href={url} passHref>
-          <a target={newTab ? '_blank' : '_self'}>
-            <button
-              className={buttonClasses}
-              data-hover={dataHover}
-              onClick={() => setIsOpen(false)}
-            >
-              {buttonContent}
-            </button>
-          </a>
-        </Link>
-      ) : (
-        <button
-          className={buttonClasses}
-          data-hover={dataHover}
-          onClick={() => setIsOpen(false)}
-        >
-          {buttonContent}
-        </button>
-      )}
-    </>
+    <button {...commonProps}>
+      {buttonContent}
+    </button>
   );
 };
 

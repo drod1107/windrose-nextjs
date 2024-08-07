@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-montserrat text-papaya-whip bg-gunmetal;
+    @apply font-saira text-papaya-whip bg-gunmetal;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-lora text-myrtle-green;
@@ -16,10 +16,10 @@
 
 @layer components {
   .btn {
-    @apply font-montserrat bg-myrtle-green text-papaya-whip px-6 py-3 rounded-full hover:bg-myrtle-green-light;
+    @apply font-saira bg-myrtle-green text-papaya-whip px-6 py-3 rounded-full hover:bg-myrtle-green-light;
   }
   .btn-secondary {
-    @apply font-montserrat bg-earth-yellow text-gunmetal px-6 py-3 rounded-full hover:bg-palatinate hover:text-papaya-whip;
+    @apply font-saira bg-earth-yellow text-gunmetal px-6 py-3 rounded-full hover:bg-palatinate hover:text-papaya-whip;
   }
 }
 
