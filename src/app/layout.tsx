@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-gunmetal text-papaya-whip min-h-screen flex flex-col`}>
         <Navbar items={navbarItems} />
-        <main className="flex-grow py-16 px-5 md:px-10 lg:px-16 rounded-xl">
+        <main className="flex-grow py-16  rounded-xl">
           {children}
         </main>
         <Footer />

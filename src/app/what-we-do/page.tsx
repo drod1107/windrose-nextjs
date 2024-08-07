@@ -30,8 +30,7 @@ export const metadata: Metadata = {
 export default function WhatWeDoPage() {
   return (
     <div className="min-h-screen bg-gunmetal">
-      <main className="pt-16">  {/* Add padding-top to account for the fixed navbar */}
-        <YouTubeEmbed videoId="1X6DMEWbc9w" />
+      <main className="p-2">  {/* Add padding-top to account for the fixed navbar */}
         <About />
       </main>
     </div>
