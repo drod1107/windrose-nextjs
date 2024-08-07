@@ -22,10 +22,10 @@ export const Contact: React.FC = () => (
 
           {/* Content Column */}
           <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-myrtle-green">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-myrtle-green font-saira text-shadow">
               READY TO BEGIN YOUR JOURNEY?
             </h2>
-            <p className="text-lg mb-8 text-papaya-whip">
+            <p className="text-lg mb-8 text-papaya-whip font-hind">
               Schedule a free consultation or reach out on LinkedIn. We'll be happy to help. Stop wasting time with things you hate and get back to the reason you started your business. The rest is our problem now. It's that simple.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -34,7 +34,7 @@ export const Contact: React.FC = () => (
                 url="https://calendar.google.com/calendar/appointments/schedules/AcZssZ23UWilO1cd2IM1uSQqE1jCSEgHav1XImda-cfXJDH5FW-AuMgyz1xFH27IsAaTBn-4ZOPVsU7F?gv=true"
                 buttonStyle="btn"
                 newTab={true}
-                className="flex items-center justify-center text-gunmetal bg-earth-yellow hover:bg-myrtle-green-light transition duration-300 ease-in-out"
+                className="flex items-center justify-center text-gunmetal bg-earth-yellow hover:bg-myrtle-green-light transition duration-300 ease-in-out font-saira font-bold"
               >
                 <Calendar className="w-5 h-5 mr-2" />
               </CustomButton>
@@ -44,7 +44,7 @@ export const Contact: React.FC = () => (
                 buttonStyle="btn-secondary"
                 newTab={true}
                 aria-label="Connect on LinkedIn"
-                className="flex items-center justify-center bg-myrtle-green text-papaya-whip hover:bg-myrtle-green-light transition duration-300 ease-in-out"
+                className="flex items-center justify-center bg-myrtle-green text-papaya-whip hover:bg-myrtle-green-light transition duration-300 ease-in-out font-saira font-bold"
               >
                 <Linkedin className="w-5 h-5 mr-2" />
               </CustomButton>

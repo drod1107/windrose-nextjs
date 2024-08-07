@@ -45,8 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({ items = [] }) => {
               />
             </Link>
           </div>
-          <div className="flex-grow text-center">
-            <span className="text-papaya-whip font-bold text-xl md:text-2xl lg:text-3xl">
+          <div className="flex-grow text-start px-5">
+            <span className="text-papaya-whip font-bold text-xl md:text-2xl lg:text-3xl font-saira text-shadow">
               <span className="md:hidden">Windrose & Co</span>
               <span className="hidden md:inline">Windrose & Company</span>
             </span>
@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ items = [] }) => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                  className={`px-4 py-2 rounded-md text-lg font-medium transition-colors duration-200 font-hind ${
                     pathname === item.href
                       ? 'bg-myrtle-green text-papaya-whip'
                       : 'text-papaya-whip hover:bg-myrtle-green-light hover:text-papaya-whip'
@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ items = [] }) => {
             <Link
               key={item.href}
               href={item.href}
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 font-hind ${
                 pathname === item.href
                   ? 'bg-myrtle-green text-papaya-whip'
                   : 'text-papaya-whip hover:bg-myrtle-green-light hover:text-papaya-whip'
