@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import CustomButton from './CustomButton';
 import { Calendar } from 'lucide-react';
 import Head from 'next/head';
