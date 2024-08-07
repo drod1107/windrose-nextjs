@@ -51,7 +51,7 @@ const WhoWeAre: React.FC = () => (
                 <p>We are a collective from diverse backgrounds including <strong>social media marketing, sales, executive function, human resources, logistics, information technology, and systems engineering</strong>.</p>
                 <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong>law, finance, advertising, and business</strong> to scale systems that let you focus on what you&#39;re great at.</p>
                 <p>Deeply rooted in the <strong>startup ecosystem of St. Louis, Missouri</strong>, we have access to systems that can kickstart your adventure in ways that might surprise you.</p>
-                <p>Ultimately, we harness our experience, cutting-edge technology, and AI to build <strong>people-first systems</strong> - because we believe computers are best used for empowering people to "human" better.</p>
+                <p>Ultimately, we harness our experience, cutting-edge technology, and AI to build <strong>people-first systems</strong> - because we believe computers are best used for empowering people to &#34;human&#34; better.</p>
               </div>
               <div className="mt-8">
                 <CustomButton
