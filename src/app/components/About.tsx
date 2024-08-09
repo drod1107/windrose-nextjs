@@ -37,7 +37,7 @@ const About: React.FC = () => (
                   }} />
               </div>
               <div className='md:w-2/3 text-lg text-papaya-whip space-y-6 font-hind'>
-                <p>With an natural-born obsession with perfection comes a driving need to improve. </p>
+                <p>With a natural-born obsession with perfection comes a driving need to improve. </p>
                 <p>We&#39;re a married couple who have learned from decades of working for or with - Fortune 500 powerhouses, nonprofits, and mom-and-pop startups alike. Every step of the way, driven by the need to understand what makes a culture successful.</p>
                 <p>We have the good fortune of working with a collective from diverse backgrounds including <strong className="font-saira">social media marketing, sales, executive function, human resources, logistics, information technology, and systems engineering</strong>.</p>
                 <p>Our extensive relationship network allows us to leverage the skills of some of the finest professionals in <strong className="font-saira">law, finance, advertising, and business</strong> to scale systems that let you focus on what you&#39;re great at.</p>
