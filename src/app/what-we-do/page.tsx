@@ -1,4 +1,4 @@
-import About from '../components/About';
+import Services from '../components/Services';
 import YouTubeEmbed from '../components/YoutubeEmbed';
 import { Metadata } from 'next';
 
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 
 export default function WhatWeDoPage() {
   return (
-    <div className="min-h-screen bg-gunmetal">
+    <div className="min-h-screen bg-gunmetal max-w-screen-lg mx-auto">
       <main className="p-2">  {/* Add padding-top to account for the fixed navbar */}
-        <About />
+        <Services />
       </main>
     </div>
   );
