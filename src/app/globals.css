@@ -12,6 +12,9 @@
   a {
     @apply text-palatinate hover:text-myrtle-green-light;
   }
+  p {
+    @apply text-earth-yellow;
+  }
 }
 
 @layer components {
