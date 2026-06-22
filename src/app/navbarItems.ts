@@ -10,9 +10,9 @@ export interface NavbarItem {
   export const navbarItems: NavbarItem[] = [
     { href: '/for-schools', label: 'For Schools' },
     { href: '/case-study', label: 'Case Study' },
+    { href: '/insights', label: 'Insights' },
     { href: '/resources', label: 'Resources' },
     { href: '/who-we-are', label: 'About' },
-    { href: '/what-we-do', label: 'Consulting' },
   ];
 
   // Persistent primary conversion action.

@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { Lock, FileText, ClipboardCheck, ShieldAlert, Calendar } from 'lucide-react';
+import { Lock, FileText, ClipboardCheck, ShieldAlert } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import FinalCta from '../components/FinalCta';
 import Reveal from '../components/Reveal';
-import { siteConfig } from '../siteConfig';
+import LeadForm from '../components/LeadForm';
 
 export const metadata: Metadata = {
   title: 'Resources for K-12 AI Safety',
@@ -67,23 +67,25 @@ export default function ResourcesPage() {
             ))}
           </div>
 
-          <Reveal className="mt-12 rounded-xl2 bg-gunmetal-deep text-cream p-8 md:p-10 text-center" delay={120}>
-            <h3 className="font-display text-2xl md:text-3xl">Want one of these for your district?</h3>
-            <p className="font-body text-cream/75 mt-3 max-w-2xl mx-auto">
-              We&rsquo;re finalizing public versions of these toolkits. In the meantime,
-              reach out and we&rsquo;ll share what you need and point you to the right
-              next step.
-            </p>
-            <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-cta mt-7"
-            >
-              <Calendar className="w-5 h-5 mr-2" aria-hidden="true" />
-              Request access
-            </a>
-          </Reveal>
+          <div className="mt-14 grid gap-8 lg:grid-cols-2 lg:items-center">
+            <Reveal>
+              <h2 className="text-3xl md:text-4xl text-gunmetal">
+                Want one of these for your district?
+              </h2>
+              <p className="font-body text-lg text-ink/70 mt-4">
+                We&rsquo;re finalizing public versions of these toolkits. Tell us which one
+                you need and a bit about your district — we&rsquo;ll send it your way and
+                point you to the right next step.
+              </p>
+            </Reveal>
+            <Reveal delay={120} className="rounded-xl2 bg-white border border-ink/5 shadow-soft p-8">
+              <LeadForm
+                source="resources-request"
+                successMessage="Thank you — we’ll send the resource you need and follow up shortly."
+                compact
+              />
+            </Reveal>
+          </div>
         </div>
       </section>
 
