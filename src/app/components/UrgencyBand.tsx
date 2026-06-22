@@ -29,7 +29,7 @@ const UrgencyBand: React.FC = () => (
       </Reveal>
       <Reveal delay={160}>
         <p className="font-body text-lg text-cream mt-8 max-w-3xl">
-          The question is no longer <em>whether</em> your district needs an AI policy —
+          The question is no longer <em>whether</em>{' '}your district needs an AI policy —{' '}
           it&rsquo;s whether yours will protect students or just sit in a binder.
         </p>
       </Reveal>
