@@ -1,51 +1,72 @@
 import React from 'react';
-import Head from 'next/head';
-import YouTubeEmbed from './YoutubeEmbed';
-import CustomButton from './CustomButton';
-import { Compass, Anchor } from 'lucide-react';
-
-export const metadata = {
-  title: 'Windrose & Company | Navigate Business Growth',
-  description: 'Empowering startups and solopreneurs with expert business consultancy. Navigate to richer waters with Windrose & Company.',
-};
+import { Calendar, ArrowRight, ShieldCheck } from 'lucide-react';
+import { siteConfig } from '../siteConfig';
+import CompassRose from './CompassRose';
+import UrgencyBand from './UrgencyBand';
+import Pillars from './Pillars';
+import ReadinessMatrix from './ReadinessMatrix';
+import CaseStudyTeaser from './CaseStudyTeaser';
+import FounderBand from './FounderBand';
+import FinalCta from './FinalCta';
+import Link from 'next/link';
 
 const Home: React.FC = () => (
   <>
-    <Head>
-      <title>{metadata.title}</title>
-      <meta name="description" content={metadata.description} />
-    </Head>
-    <div className="min-h-screen flex flex-col">
-      <YouTubeEmbed videoId="1X6DMEWbc9w" />
-      <div className="flex-grow bg-gunmetal py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-papaya-whip font-saira font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-8 text-shadow-lg">
-            Navigate Business Growth with Windrose & Company
+    {/* ---------- Hero ---------- */}
+    <section className="relative overflow-hidden bg-gunmetal-deep text-cream">
+      {/* layered gradient + motif */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gunmetal-deep via-gunmetal to-teal-deep/70" />
+      <CompassRose className="pointer-events-none absolute right-[-6rem] top-24 w-[34rem] h-[34rem] text-myrtle-green/25 animate-float-slow" />
+
+      <div className="container-content relative pt-36 pb-24 lg:pt-44 lg:pb-32">
+        <div className="max-w-3xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-cream/10 border border-cream/15 px-4 py-1.5 text-sm font-body font-medium text-cream/90">
+            <ShieldCheck className="w-4 h-4 text-gold" aria-hidden="true" />
+            AI safety &amp; policy for K-12 schools
+          </span>
+
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] mt-6 text-cream">
+            Your district needs an AI policy.
+            <span className="block text-myrtle-green-light mt-2">
+              We&rsquo;ll get you from compliance to culture.
+            </span>
           </h1>
-          <p className="text-papaya-whip font-hind text-xl md:text-2xl mb-12">
-            Empowering startups and solopreneurs with expert business consultancy. From process architecture to AI enhancements, we chart your course to success.
+
+          <p className="font-body text-lg md:text-xl text-cream/80 mt-7 max-w-2xl">
+            Windrose &amp; Company helps U.S. K-12 districts create board-ready AI
+            policies, train staff, and run student AI-safety programs — safely,
+            affordably, and fast.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <CustomButton
-              text="Discover Our Services"
-              url="/what-we-do"
-              buttonStyle="bg-myrtle-green hover:bg-myrtle-green-light"
-              className="text-papaya-whip font-saira font-bold text-lg px-8 py-3 rounded-full w-full sm:w-auto transition duration-300 ease-in-out"
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-10">
+            <a
+              href={siteConfig.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta text-base"
             >
-              <Compass className="w-6 h-6 mr-2" />
-            </CustomButton>
-            <CustomButton
-              text="Start Your Journey"
-              url="/contact"
-              buttonStyle="bg-earth-yellow hover:bg-palatinate hover:text-papaya-whip"
-              className="text-gunmetal font-saira font-bold text-lg px-8 py-3 rounded-full w-full sm:w-auto transition duration-300 ease-in-out"
-            >
-              <Anchor className="w-6 h-6 mr-2" />
-            </CustomButton>
+              <Calendar className="w-5 h-5 mr-2" aria-hidden="true" />
+              Book a discovery call
+            </a>
+            <Link href="/for-schools" className="btn-ghost text-base">
+              See how it works
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+            </Link>
           </div>
+
+          <p className="font-body text-sm text-cream/55 mt-6">
+            Built on a real K-8 pilot · No student data collected · {siteConfig.location}
+          </p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <UrgencyBand />
+    <Pillars />
+    <ReadinessMatrix />
+    <CaseStudyTeaser />
+    <FounderBand />
+    <FinalCta />
   </>
 );
 

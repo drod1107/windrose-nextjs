@@ -4,36 +4,72 @@
 
 @layer base {
   body {
-    @apply font-saira text-papaya-whip bg-gunmetal;
+    @apply font-body bg-gunmetal text-cream antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-lora text-myrtle-green;
+    @apply font-display font-semibold leading-tight tracking-tight;
   }
   a {
-    @apply text-palatinate hover:text-myrtle-green-light;
+    @apply transition-colors duration-200;
   }
-  p {
-    @apply text-earth-yellow;
+  /* Smooth in-page anchor jumps, but never fight the user's a11y prefs */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 }
 
 @layer components {
+  /* Primary (teal) button */
   .btn {
-    @apply font-saira bg-myrtle-green text-papaya-whip px-6 py-3 rounded-full hover:bg-myrtle-green-light;
+    @apply inline-flex items-center justify-center font-body font-semibold bg-myrtle-green text-cream px-6 py-3 rounded-full transition-all duration-300 hover:bg-myrtle-green-light hover:-translate-y-0.5 hover:shadow-soft;
   }
+  /* Secondary (earth) button */
   .btn-secondary {
-    @apply font-saira bg-earth-yellow text-gunmetal px-6 py-3 rounded-full hover:bg-palatinate hover:text-papaya-whip;
+    @apply inline-flex items-center justify-center font-body font-semibold bg-earth-yellow text-gunmetal px-6 py-3 rounded-full transition-all duration-300 hover:bg-palatinate hover:text-cream;
+  }
+  /* High-emphasis conversion CTA */
+  .btn-cta {
+    @apply inline-flex items-center justify-center font-body font-bold bg-gold text-gunmetal px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-gold-bright hover:-translate-y-0.5 hover:shadow-lift;
+  }
+  /* Ghost / outline button for dark backgrounds */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center font-body font-semibold border border-cream/40 text-cream px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-cream/10 hover:border-cream;
+  }
+  /* Eyebrow / kicker label */
+  .eyebrow {
+    @apply inline-block font-body font-semibold uppercase tracking-[0.18em] text-sm text-myrtle-green-light;
+  }
+  /* Standard content gutter */
+  .container-content {
+    @apply max-w-content mx-auto px-5 sm:px-8;
   }
 }
 
 @layer utilities {
-  .text-content {
-    @apply text-papaya-whip;
+  /* Scroll-reveal: hidden until .is-visible is toggled by IntersectionObserver */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
   }
-  .bg-primary {
-    @apply bg-myrtle-green;
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
   }
-  .bg-secondary {
-    @apply bg-earth-yellow;
+  /* Respect reduced-motion: show content immediately, no transforms */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .animate-float-slow {
+      animation: none !important;
+    }
   }
 }

@@ -29,8 +29,8 @@ export const metadata: Metadata = {
 
 export default function WhatWeDoPage() {
   return (
-    <div className="min-h-screen bg-gunmetal max-w-screen-lg mx-auto">
-      <main className="p-2">  {/* Add padding-top to account for the fixed navbar */}
+    <div className="min-h-screen bg-gunmetal max-w-screen-lg mx-auto pt-24">
+      <main className="p-2">
         <Services />
       </main>
     </div>
