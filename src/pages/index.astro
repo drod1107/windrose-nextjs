@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="Windrose & Company — AI Safety Consulting for Schools"
+  description="We write the policy, run the training, and present to your board — so your district has a clear answer to the question every superintendent is already being asked: what are we doing about AI?"
+>
+  <Nav />
+
+  <!-- Hero -->
+  <div style="background:#06101E;padding:108px 52px 88px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 360px;gap:72px;align-items:center;min-height:calc(100vh - 64px);">
+    <div style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:600px;height:600px;opacity:0.03;pointer-events:none;" aria-hidden="true">
+      <svg viewBox="0 0 200 200" width="600" height="600">
+        <circle cx="100" cy="100" r="92" stroke="#C4942A" stroke-width="1" fill="none"/>
+        <circle cx="100" cy="100" r="70" stroke="#C4942A" stroke-width="0.6" fill="none"/>
+        <circle cx="100" cy="100" r="48" stroke="#C4942A" stroke-width="0.6" fill="none"/>
+        <circle cx="100" cy="100" r="26" stroke="#C4942A" stroke-width="0.6" fill="none"/>
+        <line x1="100" y1="8" x2="100" y2="192" stroke="#C4942A" stroke-width="1"/>
+        <line x1="8" y1="100" x2="192" y2="100" stroke="#C4942A" stroke-width="1"/>
+        <line x1="25" y1="25" x2="175" y2="175" stroke="#C4942A" stroke-width="0.5"/>
+        <line x1="175" y1="25" x2="25" y2="175" stroke="#C4942A" stroke-width="0.5"/>
+        <polygon points="100,10 102,95 100,88 98,95" fill="#C4942A"/>
+        <polygon points="100,190 98,105 100,112 102,105" fill="#C4942A"/>
+        <polygon points="190,100 105,102 112,100 105,98" fill="#C4942A"/>
+        <polygon points="10,100 95,98 88,100 95,102" fill="#C4942A"/>
+      </svg>
+    </div>
+    <div style="position:relative;z-index:2;" class="fade-up">
+      <div style="display:inline-block;background:rgba(196,148,42,0.1);border:1px solid rgba(196,148,42,0.28);color:#C4942A;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;padding:5px 14px;margin-bottom:32px;">AI Safety Consulting &middot; Sullivan, Missouri</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:76px;font-weight:300;color:#F4EFE6;line-height:1.03;margin:0 0 28px;letter-spacing:-0.01em;">Make AI a safe<br>investment for<br><em style="color:#C4942A;font-style:italic;">your school.</em></h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:17px;font-weight:300;color:rgba(244,239,230,0.62);line-height:1.82;margin:0 0 44px;max-width:520px;">We write the policy, run the training, and present to your board &mdash; so your district has a clear answer to the question every superintendent is already being asked: <em style="color:rgba(244,239,230,0.8);">what are we doing about AI?</em></p>
+      <div style="display:flex;gap:20px;align-items:center;">
+        <a href="/contact" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#06101E;background:#C4942A;padding:15px 34px;letter-spacing:0.1em;text-transform:uppercase;">Talk to us</a>
+        <a href="/case-studies" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:400;color:rgba(244,239,230,0.5);letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(244,239,230,0.15);padding-bottom:2px;">Read the case study <span style="color:#C4942A;">&rarr;</span></a>
+      </div>
+    </div>
+    <!-- Proof card -->
+    <div style="background:rgba(196,148,42,0.06);border:1px solid rgba(196,148,42,0.18);padding:36px;position:relative;z-index:2;">
+      <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:rgba(196,148,42,0.6);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:16px;">Recent Work</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:#C4942A;line-height:1.1;margin:0 0 8px;">Policy adopted<br>without edits.</div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.45);line-height:1.7;margin-bottom:20px;">Board adoption on first presentation. No revisions required.</div>
+      <div style="height:1px;background:rgba(196,148,42,0.15);margin-bottom:20px;"></div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(244,239,230,0.35);line-height:1.75;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:22px;">Strain-Japan R-XVI School District<br>Rural K-8 &middot; Missouri &middot; Nov. 2025</div>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+        <li style="display:flex;align-items:flex-start;gap:10px;"><span style="color:#C4942A;font-size:13px;margin-top:1px;flex-shrink:0;">&#10003;</span><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.6);line-height:1.5;">AI use policy built for their specific grade range and community</span></li>
+        <li style="display:flex;align-items:flex-start;gap:10px;"><span style="color:#C4942A;font-size:13px;margin-top:1px;flex-shrink:0;">&#10003;</span><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.6);line-height:1.5;">Staff training so teachers know exactly where the lines are</span></li>
+        <li style="display:flex;align-items:flex-start;gap:10px;"><span style="color:#C4942A;font-size:13px;margin-top:1px;flex-shrink:0;">&#10003;</span><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.6);line-height:1.5;">Board presentation and adoption package</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Risk grid -->
+  <section style="background:#040B17;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:40px;">
+      <div style="width:28px;height:1px;background:#C4942A;"></div>
+      <span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">Five risks your district faces right now &mdash; whether or not there&rsquo;s a policy on it</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(196,148,42,0.1);">
+      <div style="background:#040B17;padding:28px 22px;"><div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:rgba(196,148,42,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;">01</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Privacy</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.65;margin:0;">Students hand personal data to systems that retain it indefinitely &mdash; often without district review of the terms.</p></div>
+      <div style="background:#040B17;padding:28px 22px;"><div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:rgba(196,148,42,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;">02</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Misinformation</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.65;margin:0;">AI produces confident falsehoods. Deepfake audio and images compound it, and spread fast in a school community.</p></div>
+      <div style="background:#040B17;padding:28px 22px;"><div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:rgba(196,148,42,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;">03</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">AI Companions</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.65;margin:0;">More than 70% of US teens have used an AI companion chatbot. Always available, never challenging &mdash; social resilience suffers.</p></div>
+      <div style="background:#040B17;padding:28px 22px;"><div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:rgba(196,148,42,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;">04</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Data Exploitation</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.65;margin:0;">Student work feeds model training under terms no one reviewed. The district approved the tool &mdash; not what the tool does with the output.</p></div>
+      <div style="background:#040B17;padding:28px 22px;"><div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:600;color:rgba(196,148,42,0.5);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;">05</div><h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Mental Health</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.65;margin:0;">Heavy chatbot use correlates with reduced face-to-face interaction, self-trust, and the willingness to tolerate discomfort.</p></div>
+    </div>
+    <div style="margin-top:28px;text-align:right;">
+      <a href="/schools" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#C4942A;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid rgba(196,148,42,0.3);padding-bottom:2px;">See the full risk picture &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Governance frame -->
+  <section style="background:#0B1524;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);">
+    <div style="display:grid;grid-template-columns:320px 1fr;gap:64px;align-items:start;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;"><div style="width:28px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">Governance</span></div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:#F4EFE6;line-height:1.18;margin:0 0 18px;">What the board actually has to decide.</h2>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:rgba(244,239,230,0.45);line-height:1.82;margin:0;">These are governance decisions &mdash; not technology ones. A board doesn&rsquo;t need to understand how AI works. It needs to know which decisions are its responsibility, and what happens when those decisions go unmade.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(196,148,42,0.1);">
+        <div style="background:#0B1524;padding:28px 24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Where AI is permitted in student work</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.7;margin:0;">Requiring students to disclose what assistance they used converts a detection problem into an honesty standard.</p></div>
+        <div style="background:#0B1524;padding:28px 24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">What staff may use AI for</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.7;margin:0;">Particularly anything touching student records or evaluation. Clear lines let a teacher act without wondering whether it will be defensible later.</p></div>
+        <div style="background:#0B1524;padding:28px 24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Who reviews new tools</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.7;margin:0;">Including AI features added to tools the district already licenses. New capabilities should route through a decision, not arrive silently by default.</p></div>
+        <div style="background:#0B1524;padding:28px 24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">How an incident is reported</h3><p style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(244,239,230,0.4);line-height:1.7;margin:0;">A response path must exist before it is needed. Deepfake harassment or data exposure needs a clear chain &mdash; not improvisation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section style="background:#06101E;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:40px;"><div style="width:28px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">What we deliver</span></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(196,148,42,0.1);">
+      <div style="background:#06101E;padding:36px 30px;"><div style="width:20px;height:1px;background:#C4942A;margin-bottom:20px;"></div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#F4EFE6;margin:0 0 12px;">AI Use Policy</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.5);line-height:1.75;margin:0;">Board-ready from day one. Built for your district&rsquo;s exact context &mdash; grade levels, community values, existing tools &mdash; not adapted from a generic template.</p></div>
+      <div style="background:#06101E;padding:36px 30px;"><div style="width:20px;height:1px;background:#C4942A;margin-bottom:20px;"></div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#F4EFE6;margin:0 0 12px;">Staff Training</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.5);line-height:1.75;margin:0;">A 90-minute session that gives teachers clear answers to the questions they&rsquo;re already fielding from students and parents. No jargon. Practical lines.</p></div>
+      <div style="background:#06101E;padding:36px 30px;"><div style="width:20px;height:1px;background:#C4942A;margin-bottom:20px;"></div><h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:500;color:#F4EFE6;margin:0 0 12px;">Board Presentation</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.5);line-height:1.75;margin:0;">A complete adoption package: framing document, presentation, and adoption support so the board walks out with a policy and a clear record of the decision.</p></div>
+    </div>
+    <div style="margin-top:28px;display:flex;justify-content:center;">
+      <a href="/schools" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#C4942A;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid rgba(196,148,42,0.3);padding-bottom:2px;">See full offer and pricing &rarr;</a>
+    </div>
+  </section>
+
+  <!-- About teaser -->
+  <section style="background:#0B1524;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);display:grid;grid-template-columns:180px 1fr;gap:52px;align-items:center;">
+    <div style="width:180px;height:180px;border-radius:2px;overflow:hidden;border:1px solid rgba(196,148,42,0.2);flex-shrink:0;">
+      <img src="/assets/profile.jpg" alt="David Rodriguez" width="180" height="180" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy" />
+    </div>
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><div style="width:20px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">About</span></div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;color:#F4EFE6;margin:0 0 14px;line-height:1.2;">David Rodriguez</h2>
+      <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(244,239,230,0.55);line-height:1.82;margin:0 0 20px;max-width:580px;">Windrose is the practice of a career spent at the intersection of technology and people &mdash; understanding AI well enough to apply it carefully, and understanding organizations well enough to know where careful application actually matters.</p>
+      <a href="/about" style="font-family:'DM Sans',sans-serif;font-size:12px;color:#C4942A;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid rgba(196,148,42,0.3);padding-bottom:2px;">More about David &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <section style="background:#040B17;padding:80px 52px;border-top:1px solid rgba(196,148,42,0.08);text-align:center;">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:300;color:#F4EFE6;line-height:1.08;margin:0 0 20px;">Your district deserves a<br><em style="color:#C4942A;">clear answer.</em></p>
+    <p style="font-family:'DM Sans',sans-serif;font-size:15px;font-weight:300;color:rgba(244,239,230,0.45);margin:0 0 40px;line-height:1.8;">One conversation. No obligation. We&rsquo;ll tell you exactly what your district needs and whether we&rsquo;re the right fit.</p>
+    <a href="/contact" style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#06101E;background:#C4942A;padding:16px 40px;letter-spacing:0.12em;text-transform:uppercase;">Talk to us</a>
+  </section>
+
+  <Footer />
+</Base>

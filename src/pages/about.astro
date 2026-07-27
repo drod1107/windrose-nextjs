@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base
+  title="About — Windrose & Company"
+  description="David Rodriguez is the founder of Windrose & Company, an AI safety consulting practice based in Sullivan, Missouri, serving school districts across the Midwest."
+>
+  <Nav />
+
+  <div style="background:#06101E;padding:100px 52px 80px;display:grid;grid-template-columns:260px 1fr;gap:72px;align-items:center;">
+    <div style="width:260px;height:260px;border-radius:2px;overflow:hidden;border:1px solid rgba(196,148,42,0.2);">
+      <img src="/assets/profile.jpg" alt="David Rodriguez" width="260" height="260" style="width:100%;height:100%;object-fit:cover;object-position:center top;" />
+    </div>
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;"><div style="width:28px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">About</span></div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:#F4EFE6;line-height:1.08;margin:0 0 24px;">David Rodriguez</h1>
+      <p style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;color:rgba(244,239,230,0.6);line-height:1.85;margin:0 0 16px;max-width:580px;">Windrose &amp; Company is the practice of someone who has spent a career at the intersection of technology and people &mdash; learning how systems work, where they go wrong, and how the people inside them stay grounded when the systems stop making sense.</p>
+      <p style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;color:rgba(244,239,230,0.6);line-height:1.85;margin:0;max-width:580px;">The AI safety work is an extension of that: not because AI is uniquely dangerous, but because the confusion around it is real, the risks are under-addressed for the people who actually face them, and most of the existing help is designed for someone else.</p>
+    </div>
+  </div>
+
+  <section style="background:#040B17;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;"><div style="width:28px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">The philosophy</span></div>
+      <blockquote style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#C4942A;font-style:italic;line-height:1.12;margin:0 0 24px;border:none;padding:0;">Computers are best used for empowering people to human better.</blockquote>
+      <p style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:rgba(244,239,230,0.45);line-height:1.82;margin:0;">That&rsquo;s the frame for every engagement. AI is not the point. The people it touches are the point. When AI makes their lives more navigable, that&rsquo;s a good outcome. When it introduces confusion, risk, or dependency they didn&rsquo;t choose, that&rsquo;s a problem worth solving.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px;padding-top:8px;">
+      <div style="border-left:2px solid rgba(196,148,42,0.25);padding-left:24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Why schools</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.45);line-height:1.8;margin:0;">Schools are where AI risk is most acute and least addressed. The people most affected &mdash; students, teachers, parents &mdash; have the least institutional support. That asymmetry is worth correcting.</p></div>
+      <div style="border-left:2px solid rgba(196,148,42,0.25);padding-left:24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Why not jargon</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.45);line-height:1.8;margin:0;">The people who need clear AI guidance are the ones most confused by AI language. This work is only useful if it translates &mdash; to a school board, to a parent, to a teacher who didn&rsquo;t sign up to be a technology expert.</p></div>
+      <div style="border-left:2px solid rgba(196,148,42,0.25);padding-left:24px;"><h3 style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:#F4EFE6;margin:0 0 8px;">Based in Sullivan, Missouri</h3><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:rgba(244,239,230,0.45);line-height:1.8;margin:0;">Serving districts across Missouri, Illinois, Kansas, Arkansas, Kentucky, and Iowa.</p></div>
+    </div>
+  </section>
+
+  <section style="background:#06101E;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.08);text-align:center;">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:#F4EFE6;margin:0 0 16px;">Ready to talk about your district?</h2>
+    <p style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:rgba(244,239,230,0.45);margin:0 0 36px;">One conversation. We&rsquo;ll tell you exactly what you need and whether we&rsquo;re the right fit.</p>
+    <a href="/contact" style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#06101E;background:#C4942A;padding:14px 36px;letter-spacing:0.1em;text-transform:uppercase;">Get in touch</a>
+  </section>
+
+  <Footer />
+</Base>

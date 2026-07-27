@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+---
+<Base
+  title="Contact — Windrose & Company"
+  description="Schedule a free consultation or send a message. One conversation, no obligation."
+>
+  <Nav />
+
+  <div style="background:#06101E;padding:100px 52px 80px;">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:32px;"><div style="width:28px;height:1px;background:#C4942A;"></div><span style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:#C4942A;letter-spacing:0.16em;text-transform:uppercase;">Get in touch</span></div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:#F4EFE6;line-height:1.06;margin:0 0 16px;">One conversation.<br>No obligation.</h1>
+    <p style="font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;color:rgba(244,239,230,0.5);line-height:1.82;margin:0;max-width:520px;">We&rsquo;ll tell you exactly what your district needs and whether we&rsquo;re the right fit. If we&rsquo;re not, we&rsquo;ll tell you that too.</p>
+  </div>
+
+  <div style="background:#0B1524;padding:72px 52px;border-top:1px solid rgba(196,148,42,0.1);display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:24px;">
+      <div style="background:rgba(196,148,42,0.06);border:1px solid rgba(196,148,42,0.18);padding:36px;">
+        <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:rgba(196,148,42,0.6);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:16px;">Book a call</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:#F4EFE6;margin:0 0 12px;line-height:1.2;">Schedule a free consultation</h2>
+        <p style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:rgba(244,239,230,0.5);line-height:1.8;margin:0 0 28px;">30 minutes. Pick a time that works for you. We&rsquo;ll come ready with questions about your district, and you can come with whatever you&rsquo;ve got.</p>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ23UWilO1cd2IM1uSQqE1jCSEgHav1XImda-cfXJDH5FW-AuMgyz1xFH27IsAaTBn-4ZOPVsU7F?gv=true" target="_blank" rel="noopener noreferrer" style="display:inline-block;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#06101E;background:#C4942A;padding:13px 28px;letter-spacing:0.1em;text-transform:uppercase;">Book an appointment &rarr;</a>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'DM Sans',sans-serif;font-size:10px;font-weight:500;color:rgba(196,148,42,0.6);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:24px;">Or send a message</div>
+      <form action="https://formspree.io/f/mojoqagp" method="POST" style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <label style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:rgba(244,239,230,0.4);letter-spacing:0.1em;text-transform:uppercase;" for="name">Name</label>
+            <input id="name" name="name" type="text" required style="background:rgba(244,239,230,0.04);border:1px solid rgba(244,239,230,0.1);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#F4EFE6;outline:none;border-radius:0;" />
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <label style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:rgba(244,239,230,0.4);letter-spacing:0.1em;text-transform:uppercase;" for="email">Email</label>
+            <input id="email" name="email" type="email" required style="background:rgba(244,239,230,0.04);border:1px solid rgba(244,239,230,0.1);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#F4EFE6;outline:none;border-radius:0;" />
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:rgba(244,239,230,0.4);letter-spacing:0.1em;text-transform:uppercase;" for="district">District or Organization</label>
+          <input id="district" name="district" type="text" style="background:rgba(244,239,230,0.04);border:1px solid rgba(244,239,244,0.1);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#F4EFE6;outline:none;border-radius:0;" />
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:rgba(244,239,230,0.4);letter-spacing:0.1em;text-transform:uppercase;" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required style="background:rgba(244,239,230,0.04);border:1px solid rgba(244,239,244,0.1);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:14px;color:#F4EFE6;outline:none;resize:vertical;border-radius:0;"></textarea>
+        </div>
+        <div>
+          <button type="submit" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#06101E;background:#C4942A;border:none;padding:14px 32px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Send message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <Footer />
+</Base>

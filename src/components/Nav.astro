@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: '/schools', label: 'AI Safety' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/about', label: 'About' },
+];
+const currentPath = Astro.url.pathname;
+---
+<nav style="position:sticky;top:0;z-index:100;background:rgba(6,16,30,0.97);backdrop-filter:blur(12px);height:64px;padding:0 52px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(196,148,42,0.15);">
+  <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="14" cy="14" r="12.5" stroke="#C4942A" stroke-width="0.75" fill="none"/>
+      <circle cx="14" cy="14" r="8" stroke="rgba(196,148,42,0.3)" stroke-width="0.5" fill="none"/>
+      <line x1="14" y1="1.5" x2="14" y2="26.5" stroke="rgba(196,148,42,0.5)" stroke-width="0.75"/>
+      <line x1="1.5" y1="14" x2="26.5" y2="14" stroke="rgba(196,148,42,0.5)" stroke-width="0.75"/>
+      <line x1="5" y1="5" x2="23" y2="23" stroke="rgba(196,148,42,0.25)" stroke-width="0.5"/>
+      <line x1="23" y1="5" x2="5" y2="23" stroke="rgba(196,148,42,0.25)" stroke-width="0.5"/>
+      <polygon points="14,2.5 15.2,12.5 14,11.5 12.8,12.5" fill="#C4942A"/>
+      <polygon points="14,25.5 12.8,15.5 14,16.5 15.2,15.5" fill="rgba(196,148,42,0.4)"/>
+      <circle cx="14" cy="14" r="2" fill="#C4942A"/>
+    </svg>
+    <span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;color:#F4EFE6;letter-spacing:0.03em;">Windrose <span style="color:#C4942A;">&amp;</span> Company</span>
+  </a>
+  <div style="display:flex;gap:32px;align-items:center;">
+    {links.map(({ href, label }) => (
+      <a href={href} style={`font-family:'DM Sans',sans-serif;font-size:12px;color:${currentPath === href ? '#F4EFE6' : 'rgba(244,239,230,0.55)'};letter-spacing:0.08em;text-transform:uppercase;`}>{label}</a>
+    ))}
+    <a href="/contact" style="font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;color:#C4942A;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(196,148,42,0.55);padding:7px 18px;">Get in touch</a>
+  </div>
+</nav>
