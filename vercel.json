@@ -1,6 +1,6 @@
-﻿{
-  " buildCommand\: \astro build\,
- \outputDirectory\: \dist\,
- \installCommand\: \npm install\,
- \framework\: \astro\
+{
+  "buildCommand": "astro build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "astro"
 }
