@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import { navbarItems } from "./navbarItems";
 import Footer from "./components/Footer";
 import { inter, hind, montserrat, lora, saira } from './fonts';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: {
@@ -25,9 +25,9 @@ export default function RootLayout({
         <Navbar items={navbarItems} />
         <main className="flex-grow py-16 rounded-xl">
           {children}
-          <Analytics />
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
