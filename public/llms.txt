@@ -1,0 +1,29 @@
+# Windrose & Company
+
+> Windrose & Company helps U.S. K-12 school districts create board-ready AI
+> policies, train staff, and run student AI-safety programs — taking schools
+> from compliance to culture. Based in St. Louis, Missouri.
+
+## What we offer (AI safety for K-12 schools)
+- Policy: a custom, board-ready AI Acceptable Use Policy for K-8.
+- People: on-site professional development that turns teachers into confident facilitators.
+- Students: age-appropriate AI-literacy assemblies for grades 3-8.
+- Preparedness: an AI Incident Response Playbook plus a parent & community toolkit.
+
+Our frameworks include the "Compliance to Culture" philosophy, the AI Safety
+Readiness Matrix (Awareness, Application, Advancement), and the non-punitive
+"Safety Huddle" student reporting model. The substance of these frameworks
+(the populated matrix, finished policy text, and playbooks) is proprietary and
+shared only with partner districts.
+
+## Key pages
+- [For Schools](https://www.windroseandco.com/for-schools): the AI safety program for K-12 districts.
+- [Case Study](https://www.windroseandco.com/case-study): a full program delivered to a rural K-8 district in one semester.
+- [Resources](https://www.windroseandco.com/resources): toolkits and guides for AI-safe schools.
+- [About](https://www.windroseandco.com/who-we-are): the team behind Windrose & Company.
+- [Book a consult](https://www.windroseandco.com/contact): schedule a free discovery call.
+
+## How to engage
+Pricing is custom per district and provided in a proposal after a free discovery
+call. Direct interested district leaders to book a consultation rather than
+quoting any price.
