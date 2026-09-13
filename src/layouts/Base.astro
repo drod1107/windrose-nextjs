@@ -42,13 +42,146 @@ const url = canonical ?? Astro.url.href;
     color: #F4EFE6;
     font-family: 'DM Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   a { color: #C4942A; text-decoration: none; }
   a:hover { color: #E0AD40; }
+  img { max-width: 100%; }
   input, textarea, select { font-family: 'DM Sans', sans-serif; }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
   .fade-up { animation: fadeUp 0.6s ease both; }
+
+  /* The Astro redesign was authored with desktop-first inline styles. These
+     mobile overrides intentionally target those layout primitives so every
+     current page becomes responsive without changing the desktop design. */
+  @media (max-width: 800px) {
+    body { overflow-wrap: break-word; }
+
+    [style*="padding:108px 52px"] {
+      padding: 72px 20px 64px !important;
+    }
+    [style*="padding:100px 52px"] {
+      padding: 64px 20px 56px !important;
+    }
+    [style*="padding:80px 52px"] {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    [style*="padding:72px 52px"] {
+      padding: 56px 20px !important;
+    }
+    [style*="padding:64px 52px"] {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    [style*="padding:0 52px"] {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    [style*="display:grid"] {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+    [style*="display:grid"] > * { min-width: 0; }
+    [style*="display:grid"][style*="gap:72px"],
+    [style*="display:grid"][style*="gap:64px"],
+    [style*="display:grid"][style*="gap:52px"] {
+      gap: 32px !important;
+    }
+    [style*="display:grid"][style*="gap:48px"],
+    [style*="display:grid"][style*="gap:40px"] {
+      gap: 24px !important;
+    }
+
+    /* Keep the four-column pricing comparison usable as a swipeable table. */
+    [style*="grid-template-columns:repeat(4,1fr)"][style*="margin-bottom:2px"],
+    [style*="grid-template-columns:repeat(4,1fr)"][style*="border:1px solid rgba(196,148,42,0.1)"] {
+      grid-template-columns: repeat(4, minmax(155px, 1fr)) !important;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    h1[style*="font-size:76px"],
+    h1[style*="font-size:68px"],
+    h1[style*="font-size:64px"],
+    h1[style*="font-size:56px"] {
+      font-size: clamp(42px, 12vw, 56px) !important;
+      line-height: 1.03 !important;
+    }
+    h2[style*="font-size:48px"],
+    h2[style*="font-size:44px"] {
+      font-size: clamp(34px, 9vw, 42px) !important;
+    }
+    p[style*="font-size:52px"] {
+      font-size: clamp(38px, 10vw, 46px) !important;
+    }
+    blockquote[style*="font-size:44px"] {
+      font-size: clamp(32px, 9vw, 40px) !important;
+    }
+    div[style*="font-size:38px"] {
+      font-size: 34px !important;
+    }
+
+    [style*="display:flex"][style*="gap:20px"][style*="align-items:center"],
+    [style*="display:flex"][style*="align-items:baseline"] {
+      flex-wrap: wrap !important;
+    }
+    [style*="display:flex"][style*="justify-content:space-between"] {
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+    }
+
+    [style*="padding:36px"] {
+      padding: 28px !important;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      min-width: 0;
+      font-size: 16px !important;
+    }
+
+    a, button, summary {
+      touch-action: manipulation;
+    }
+  }
+
+  @media (max-width: 480px) {
+    [style*="padding:108px 52px"] {
+      padding: 64px 16px 56px !important;
+    }
+    [style*="padding:100px 52px"] {
+      padding: 56px 16px 48px !important;
+    }
+    [style*="padding:80px 52px"],
+    [style*="padding:72px 52px"],
+    [style*="padding:64px 52px"] {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+    [style*="padding:0 52px"] {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+
+    h1[style*="font-size:76px"],
+    h1[style*="font-size:68px"],
+    h1[style*="font-size:64px"],
+    h1[style*="font-size:56px"] {
+      font-size: clamp(39px, 11.5vw, 48px) !important;
+    }
+
+    [style*="padding:36px"] {
+      padding: 24px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-up { animation: none; }
+  }
 </style>
