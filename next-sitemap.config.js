@@ -3,11 +3,7 @@ module.exports = {
   siteUrl: process.env.SITE_URL || 'https://www.windroseandco.com',
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  exclude: ['/server-sitemap.xml'],
   robotsTxtOptions: {
-    additionalSitemaps: [
-      'https://www.windroseandco.com/server-sitemap.xml',
-    ],
     // GEO strategy (see redesign plan §6): ALLOW AI retrieval/search bots that
     // drive citations + referral traffic, BLOCK bulk training crawlers that
     // absorb content into model weights with no attribution. Adjustable.
