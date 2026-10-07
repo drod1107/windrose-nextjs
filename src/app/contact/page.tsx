@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Contact Windrose & Company | Start Your Business Journey',
   description: 'Get in touch with Windrose & Company for expert business consultancy. Schedule a free consultation or connect with us on LinkedIn to begin your journey to business success.',
+  alternates: { canonical: 'https://www.windroseandco.com/contact' },
   openGraph: {
     title: 'Contact Windrose & Company | Start Your Business Journey',
     description: 'Connect with Windrose & Company for expert business consultancy. Schedule a free consultation or reach out on LinkedIn.',
