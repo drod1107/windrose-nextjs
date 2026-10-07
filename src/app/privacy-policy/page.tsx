@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Windrose & Company',
   description: 'Our commitment to protecting your privacy and personal information at Windrose & Company.',
+  alternates: { canonical: 'https://www.windroseandco.com/privacy-policy' },
 };
 
 const PrivacyPolicyPage = () => {

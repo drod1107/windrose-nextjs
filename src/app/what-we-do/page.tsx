@@ -5,6 +5,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'What We Do | Windrose & Company',
   description: 'Discover how Windrose & Company empowers startups and solopreneurs with expert business consultancy, from process architecture to AI-driven solutions.',
+  alternates: { canonical: 'https://www.windroseandco.com/what-we-do' },
   openGraph: {
     title: 'What We Do | Windrose & Company',
     description: 'Expert business consultancy for startups and solopreneurs. Discover our unique approach to people-first systems and AI-driven solutions.',

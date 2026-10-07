@@ -1,9 +1,14 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Image from "next/image";
 import CustomButton from '../components/CustomButton';
 import { Calendar } from 'lucide-react';
 import Head from 'next/head';
 import About from '../components/About';
+
+export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.windroseandco.com/who-we-are' },
+};
 
 const WhoWeAre: React.FC = () => (
   <>
