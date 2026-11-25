@@ -5,7 +5,8 @@ import { siteConfig } from '../siteConfig';
 
 const exploreLinks = [
   { href: '/for-schools', label: 'For Schools' },
-  { href: '/case-study', label: 'Case Study' },
+  { href: '/case-study', label: 'Education case study' },
+  { href: '/case-study/wintergarten', label: 'Business case study' },
   { href: '/insights', label: 'Insights' },
   { href: '/resources', label: 'Resources' },
   { href: '/who-we-are', label: 'About' },
@@ -32,8 +33,7 @@ const Footer: React.FC = () => (
             </span>
           </div>
           <p className="font-body text-sm text-cream/60 mt-4 max-w-xs">
-            AI safety, policy &amp; integration for K-12 schools. From compliance to
-            culture. {siteConfig.location}.
+            People-first technology consulting, AI automation and AI governance. {siteConfig.location}.
           </p>
         </div>
 
@@ -59,8 +59,7 @@ const Footer: React.FC = () => (
             Get started
           </h2>
           <p className="font-body text-sm text-cream/60 mt-4">
-            Book a free discovery call and we&rsquo;ll map your district&rsquo;s path
-            to safe, effective AI.
+            Book a free discovery call and we&rsquo;ll explore practical ways to help your organization.
           </p>
           <a
             href={siteConfig.bookingUrl}

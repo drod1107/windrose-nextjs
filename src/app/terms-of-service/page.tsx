@@ -4,6 +4,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | Windrose & Company',
   description: 'The terms and conditions governing the use of Windrose & Company services and website.',
+  alternates: { canonical: 'https://www.windroseandco.com/terms-of-service' },
 };
 
 const TermsOfServicePage = () => {

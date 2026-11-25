@@ -6,6 +6,7 @@ import Reveal from '../components/Reveal';
 import LeadForm from '../components/LeadForm';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.windroseandco.com/resources' },
   title: 'Resources for K-12 AI Safety',
   description:
     'Toolkits and guides to help K-12 districts navigate AI safely — including a parent AI safety toolkit, a sample acceptable use policy, and the AI Safety Readiness self-assessment.',

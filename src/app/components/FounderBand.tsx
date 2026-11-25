@@ -37,13 +37,9 @@ const FounderBand: React.FC = () => (
             <p>
               We harness experience, technology, and AI to build people-first systems,
               because we believe computers are best used for empowering people to
-              &ldquo;human&rdquo; better. For schools, that means AI students can use
-              wisely and staff can manage with confidence.
+              &ldquo;human&rdquo; better. For entrepreneurs, educators and community organizations, that means technology that gives people more capacity and confidence.
             </p>
-            <p className="text-ink/90 font-medium">
-              Our founder is even stepping into district board service — because we
-              don&rsquo;t just advise on AI safety in schools, we show up for it.
-            </p>
+            <p className="text-ink/90 font-medium">Based in Missouri, we bring firsthand experience of the challenges facing small organizations and the communities they serve.</p>
           </div>
           <Link href="/who-we-are" className="inline-flex items-center font-body font-semibold text-myrtle-green hover:text-teal-deep mt-6">
             Meet the team
