@@ -1,3 +1,4 @@
+import { siteConfig } from '../siteConfig';
 import React from 'react';
 import Image from "next/image";
 import CustomButton from './CustomButton';
@@ -33,7 +34,7 @@ export const Contact: React.FC = () => (
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <CustomButton
                 text="Book an appointment"
-                url="https://calendar.google.com/calendar/appointments/schedules/AcZssZ23UWilO1cd2IM1uSQqE1jCSEgHav1XImda-cfXJDH5FW-AuMgyz1xFH27IsAaTBn-4ZOPVsU7F?gv=true"
+                url={siteConfig.bookingUrl}
                 buttonStyle="btn"
                 newTab={true}
                 className="flex items-center justify-center text-gunmetal bg-earth-yellow hover:bg-myrtle-green-light transition duration-300 ease-in-out font-saira font-bold"
