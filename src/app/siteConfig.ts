@@ -5,7 +5,7 @@
 export const siteConfig = {
   name: 'Windrose & Company',
   bookingUrl:
-    'https://calendar.google.com/calendar/appointments/schedules/AcZssZ23UWilO1cd2IM1uSQqE1jCSEgHav1XImda-cfXJDH5FW-AuMgyz1xFH27IsAaTBn-4ZOPVsU7F?gv=true',
+    'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Nahh7fywh8jaR7Gp79tn6VGqKD7tNTB0wEte_Izb2Y-3icytxHWW_WU_NURin-5eKwDfa6lLt?gv=true',
   linkedinUrl: 'https://www.linkedin.com/in/david-windrose/',
   location: 'St. Louis, Missouri',
   url: 'https://www.windroseandco.com',
