@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className="min-h-screen bg-gunmetal py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <div className="min-h-screen bg-cloud pb-20 pt-36 px-4 sm:px-6 lg:px-8 flex justify-center">
       <div className="w-full max-w-4xl">
-        <div className="relative rounded-xl shadow-2xl overflow-hidden">
+        <div className="relative rounded-xl border border-[#D9DDD3] bg-white shadow-soft overflow-hidden">
           {/* Glassmorphism background */}
-          <div className="absolute inset-0 bg-gunmetal bg-opacity-60 backdrop-filter backdrop-blur-md z-0"></div>
+          <div className="absolute inset-0 bg-white z-0"></div>
           
           {/* Content */}
           <div className="relative z-10 p-8 md:p-12">
             <h1 className="text-3xl font-bold text-myrtle-green mb-8">Privacy Policy</h1>
-            <div className="space-y-6 text-papaya-whip">
+            <div className="space-y-6 text-ink/85">
               <p>
                 At Windrose & Company, we are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our website or services.
               </p>
