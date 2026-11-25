@@ -10,33 +10,39 @@ const config: Config = {
     extend: {
       colors: {
         // --- Brand palette (kept for backwards compatibility) ---
-        'papaya-whip': '#FFEFD5',
-        'gunmetal': '#2B3D4F',
-        'myrtle-green': '#317873',
-        'myrtle-green-light': '#3D958F',
-        'palatinate': '#682860',
-        'earth-yellow': '#E1A95F',
+        'signal-black': '#191C1A',
+        'signal-lime': '#D9F65B',
+        'signal-coral': '#EF7367',
+        'signal-fog': '#EFF1EC',
+        'signal-paper': '#FFFFFF',
+        'signal-muted': '#555B54',
+        'papaya-whip': '#FFFFFF',
+        'gunmetal': '#272A26',
+        'myrtle-green': '#353B30',
+        'myrtle-green-light': '#34392F',
+        'palatinate': '#403F3A',
+        'earth-yellow': '#EF7367',
 
         // --- Evolved semantic tokens (2026 relaunch) ---
         // Deep bases for dark sections + gradients
-        'gunmetal-deep': '#1E2C3A',
-        'ink': '#22303C',
+        'gunmetal-deep': '#191C1A',
+        'ink': '#1C201D',
         // Primary (teal) family
-        'teal-deep': '#245E59',
+        'teal-deep': '#30392F',
         // Bright, saturated CTA accent
-        'gold': '#EBB24E',
-        'gold-bright': '#F4C065',
+        'gold': '#D9F65B',
+        'gold-bright': '#CBE84C',
         // Light surfaces for airy, readable content sections
-        'cream': '#FFF7EC',
-        'cloud': '#F3EFE6',
-        'mist': '#E7EFEE',
+        'cream': '#FFFFFF',
+        'cloud': '#EFF1EC',
+        'mist': '#F7F8F4',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'var(--font-saira)', 'sans-serif'],
         serif: ['var(--font-lora)', 'var(--font-saira)', 'serif'],
         // Display headings + UI/body pairing for the relaunch
-        display: ['var(--font-lora)', 'serif'],
-        body: ['var(--font-montserrat)', 'sans-serif'],
+        display: ['var(--font-inter)', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
         saira: ['var(--font-saira)', 'sans-serif'],
         lora: ['var(--font-lora)', 'serif'],
         hind: ['var(--font-hind)', 'sans-serif'],
@@ -50,8 +56,8 @@ const config: Config = {
         '4xl': '2rem',
       },
       boxShadow: {
-        'soft': '0 10px 40px -12px rgba(16, 30, 40, 0.35)',
-        'lift': '0 24px 60px -20px rgba(16, 30, 40, 0.45)',
+        'soft': '0 10px 36px -22px rgba(25, 28, 26, 0.18)',
+        'lift': '0 20px 48px -22px rgba(25, 28, 26, 0.24)',
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',

@@ -46,7 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${hind.variable} ${montserrat.variable} ${lora.variable} ${saira.variable}`}>
-      <body className={`bg-gunmetal text-cream min-h-screen flex flex-col font-body`}>
+      <body className="min-h-screen bg-cream text-ink flex flex-col font-body">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -68,8 +68,9 @@ export default function RootLayout({
             }),
           }}
         />
+        <a href="#main-content" className="fixed left-4 top-2 z-[100] -translate-y-[150%] rounded bg-gold px-5 py-3 font-body font-bold text-gunmetal-deep focus:translate-y-0">Skip to content</a>
         <Navbar items={navbarItems} />
-        <main className="flex-grow">
+        <main id="main-content" className="flex-grow">
           {children}
         </main>
         <Footer />

@@ -8,28 +8,24 @@ const stats = [
   { figure: '1 in 4', label: 'students already use AI for schoolwork' },
 ];
 
-/**
- * Regulatory-urgency strip — the "why now" for district leaders.
- * Figures are publicly reported policy context, not claimed outcomes.
- */
 const UrgencyBand: React.FC = () => (
-  <section className="bg-myrtle-green text-cream py-14">
+  <section className="border-y border-signal-black bg-signal-lime py-14 text-signal-black">
     <div className="container-content">
-      <Reveal className="flex items-center gap-3 text-cream/90">
-        <TrendingUp className="w-5 h-5" aria-hidden="true" />
-        <span className="eyebrow text-cream/90">The 2026 policy wave</span>
+      <Reveal className="flex items-center gap-3 text-teal-deep">
+        <TrendingUp className="h-5 w-5" aria-hidden="true" />
+        <span className="eyebrow text-teal-deep">The 2026 policy wave</span>
       </Reveal>
       <Reveal className="mt-6 grid gap-8 sm:grid-cols-3" delay={80}>
         {stats.map((s) => (
           <div key={s.label}>
-            <div className="font-display text-4xl md:text-5xl text-cream">{s.figure}</div>
-            <p className="font-body text-cream/80 mt-2">{s.label}</p>
+            <div className="font-display text-4xl font-semibold text-myrtle-green md:text-5xl">{s.figure}</div>
+            <p className="mt-2 font-body text-ink/80">{s.label}</p>
           </div>
         ))}
       </Reveal>
       <Reveal delay={160}>
-        <p className="font-body text-lg text-cream mt-8 max-w-3xl">
-          The question is no longer <em>whether</em>{' '}your district needs an AI policy —{' '}
+        <p className="mt-8 max-w-3xl font-body text-lg text-ink/90">
+          The question is no longer <em>whether</em>{' '}your district needs an AI policy,
           it&rsquo;s whether yours will protect students or just sit in a binder.
         </p>
       </Reveal>
