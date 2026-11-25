@@ -1,95 +1,53 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '../siteConfig';
 
-const exploreLinks = [
-  { href: '/for-schools', label: 'For Schools' },
-  { href: '/case-study', label: 'Education case study' },
-  { href: '/case-study/wintergarten', label: 'Business case study' },
+const links = [
+  { href: '/what-we-do', label: 'Services' },
+  { href: '/for-schools', label: 'For schools' },
+  { href: '/case-studies', label: 'Case studies' },
   { href: '/insights', label: 'Insights' },
   { href: '/resources', label: 'Resources' },
-  { href: '/who-we-are', label: 'About' },
-  { href: '/what-we-do', label: 'Consulting' },
+  { href: '/who-we-are', label: 'Our story' },
 ];
 
-const Footer: React.FC = () => (
-  <footer className="bg-gunmetal-deep text-cream/80 pt-16 pb-8">
-    <div className="container-content">
-      <div className="grid gap-10 md:grid-cols-3">
-        {/* Brand */}
-        <div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/img/windroselogo.png"
-              width={40}
-              height={40}
-              className="h-10 w-auto"
-              alt="Windrose & Company"
-              style={{ maxWidth: '100%', height: 'auto' }}
-            />
-            <span className="font-display font-semibold text-lg text-cream">
-              Windrose &amp; Company
-            </span>
+export default function Footer() {
+  return (
+    <footer className="bg-gunmetal-deep py-16 text-cream/80 sm:py-20">
+      <div className="container-content">
+        <div className="grid gap-12 border-b border-cream/15 pb-14 lg:grid-cols-12">
+          <div className="lg:col-span-6">
+            <Link href="/" className="inline-flex items-center gap-3" aria-label="Windrose & Company home">
+              <Image src="/assets/img/windroselogo.png" width={52} height={52} alt="" className="h-12 w-auto" />
+              <span className="font-display text-xl text-cream sm:text-2xl">Windrose &amp; Company</span>
+            </Link>
+            <p className="mt-6 max-w-sm font-display text-2xl leading-snug text-cream/90 sm:text-3xl">Better systems. More human work.</p>
+            <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-cream/60">{siteConfig.location} · Working with organizations everywhere.</p>
           </div>
-          <p className="font-body text-sm text-cream/60 mt-4 max-w-xs">
-            People-first technology consulting, AI automation and AI governance. {siteConfig.location}.
-          </p>
+          <div className="lg:col-span-3">
+            <h2 className="eyebrow text-gold">Find your way</h2>
+            <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-body text-sm lg:grid-cols-1">
+              {links.map(({href,label}) => <li key={href}><Link href={href} className="text-cream/75 hover:text-cream">{label}</Link></li>)}
+            </ul>
+          </div>
+          <div className="lg:col-span-3">
+            <h2 className="eyebrow text-gold">Start a conversation</h2>
+            <p className="mt-5 max-w-xs font-body text-sm leading-relaxed text-cream/75">No complicated pitch. Just a conversation about what you are trying to make better.</p>
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 border-b border-gold/70 font-body font-semibold text-cream hover:border-gold">
+              Book a consult <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </div>
         </div>
-
-        {/* Explore */}
-        <div>
-          <h2 className="font-body font-semibold uppercase tracking-[0.16em] text-xs text-cream/50">
-            Explore
-          </h2>
-          <ul className="mt-4 space-y-2.5">
-            {exploreLinks.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="font-body text-cream/75 hover:text-cream">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Get started */}
-        <div>
-          <h2 className="font-body font-semibold uppercase tracking-[0.16em] text-xs text-cream/50">
-            Get started
-          </h2>
-          <p className="font-body text-sm text-cream/60 mt-4">
-            Book a free discovery call and we&rsquo;ll explore practical ways to help your organization.
-          </p>
-          <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-cta mt-5 text-sm"
-          >
-            Book a Consult
-          </a>
+        <div className="flex flex-col gap-5 pt-7 font-body text-sm text-cream/55 md:flex-row md:items-center md:justify-between">
+          <p>&copy; {new Date().getFullYear()} Windrose &amp; Company. Built around people.</p>
+          <nav aria-label="Legal and contact" className="flex flex-wrap gap-x-6 gap-y-3">
+            <Link href="/privacy-policy" className="hover:text-cream">Privacy</Link>
+            <Link href="/terms-of-service" className="hover:text-cream">Terms</Link>
+            <Link href="/contact" className="hover:text-cream">Contact</Link>
+          </nav>
         </div>
       </div>
-
-      <div className="border-t border-cream/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-        <p className="font-body text-sm text-cream/55">
-          &copy; {new Date().getFullYear()} Windrose &amp; Company. All rights reserved.
-        </p>
-        <nav className="flex flex-wrap justify-center gap-x-5 gap-y-1">
-          <Link href="/privacy-policy" className="font-body text-sm text-cream/60 hover:text-cream">
-            Privacy Policy
-          </Link>
-          <Link href="/terms-of-service" className="font-body text-sm text-cream/60 hover:text-cream">
-            Terms of Service
-          </Link>
-          <Link href="/contact" className="font-body text-sm text-cream/60 hover:text-cream">
-            Contact
-          </Link>
-        </nav>
-      </div>
-    </div>
-  </footer>
-);
-
-export default Footer;
+    </footer>
+  );
+}

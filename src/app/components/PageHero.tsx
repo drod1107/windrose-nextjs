@@ -8,21 +8,15 @@ interface PageHeroProps {
   children?: React.ReactNode;
 }
 
-/**
- * Dark header band for inner pages. Sits under the fixed (transparent) navbar
- * and gives every page a consistent, cohesive entry point.
- */
 const PageHero: React.FC<PageHeroProps> = ({ eyebrow, title, lead, children }) => (
-  <section className="relative overflow-hidden bg-gunmetal-deep text-cream">
-    <div className="absolute inset-0 bg-gradient-to-br from-gunmetal-deep via-gunmetal to-teal-deep/60" />
-    <CompassRose className="pointer-events-none absolute right-[-5rem] top-10 w-[26rem] h-[26rem] text-myrtle-green/20" />
-    <div className="container-content relative pt-36 pb-16 lg:pt-44 lg:pb-20">
-      <div className="max-w-3xl">
-        {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-        <h1 className="font-display font-semibold text-4xl md:text-5xl lg:text-6xl leading-[1.05] mt-4 text-cream">
-          {title}
-        </h1>
-        {lead && <p className="font-body text-lg md:text-xl text-cream/80 mt-6">{lead}</p>}
+  <section className="relative isolate overflow-hidden bg-gunmetal-deep text-cream">
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-gunmetal-deep via-gunmetal to-teal-deep/65" aria-hidden="true" />
+    <CompassRose className="pointer-events-none absolute -right-28 -top-20 h-[30rem] w-[30rem] text-cream/[0.075] lg:h-[42rem] lg:w-[42rem]" aria-hidden="true" />
+    <div className="container-content relative pb-20 pt-40 sm:pt-44 lg:pb-28 lg:pt-48">
+      <div className="max-w-[880px]">
+        {eyebrow && <div className="flex items-center gap-3"><span className="h-px w-8 bg-gold" /><span className="eyebrow text-gold">{eyebrow}</span></div>}
+        <h1 className="mt-6 font-display text-[clamp(2.8rem,6vw,5.8rem)] leading-[1.04] tracking-[-0.04em] text-cream">{title}</h1>
+        {lead && <p className="mt-8 max-w-[720px] font-body text-lg leading-relaxed text-cream/80 sm:text-xl">{lead}</p>}
         {children && <div className="mt-9">{children}</div>}
       </div>
     </div>

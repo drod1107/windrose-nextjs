@@ -1,54 +1,29 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Reveal from './Reveal';
+import { ArrowUpRight } from 'lucide-react';
 
-/**
- * Founder credibility band — the human, "people-first" trust signal.
- * Reuses the existing founders photo.
- */
-const FounderBand: React.FC = () => (
-  <section className="bg-cream text-ink py-20 lg:py-28">
-    <div className="container-content">
-      <div className="grid gap-10 lg:grid-cols-5 lg:items-center">
-        <Reveal className="lg:col-span-2">
-          <Image
-            src="/assets/img/barbe_and_david.png"
-            width={520}
-            height={520}
-            alt="David and Barbe, founders of Windrose & Company"
-            className="rounded-xl2 shadow-lift w-full h-auto object-cover"
-            style={{ maxWidth: '100%', height: 'auto' }}
-          />
-        </Reveal>
-
-        <Reveal className="lg:col-span-3" delay={100}>
-          <span className="eyebrow text-myrtle-green">Why Windrose</span>
-          <h2 className="text-3xl md:text-4xl text-gunmetal mt-3">
-            People-first technology, built by people who&rsquo;ve done the work
+export default function FounderBand() {
+  return (
+    <section className="bg-cloud py-20 text-ink sm:py-24 lg:py-32">
+      <div className="container-content grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+        <div className="relative lg:col-span-5">
+          <Image src="/assets/img/barbe_and_david.png" width={760} height={760} alt="Barbe and David, founders of Windrose & Company" className="h-auto w-full object-cover" sizes="(max-width: 1024px) 100vw, 42vw" />
+          <div className="absolute -bottom-5 -right-2 bg-gold px-5 py-3 font-body text-xs font-bold uppercase tracking-[0.14em] text-gunmetal-deep sm:right-[-16px]">People behind the process</div>
+        </div>
+        <div className="lg:col-span-7">
+          <span className="eyebrow text-teal-deep">Why Windrose</span>
+          <h2 className="mt-5 max-w-2xl font-display text-[clamp(2.25rem,4.2vw,4.4rem)] leading-[1.12] text-gunmetal-deep">
+            We are people who care about <em className="font-normal text-myrtle-green">people.</em>
           </h2>
-          <div className="font-body text-lg text-ink/75 mt-5 space-y-4">
-            <p>
-              We&rsquo;re a team that has learned from decades of work with Fortune 500
-              companies, nonprofits, and startups alike — always asking what makes a
-              culture succeed.
-            </p>
-            <p>
-              We harness experience, technology, and AI to build people-first systems,
-              because we believe computers are best used for empowering people to
-              &ldquo;human&rdquo; better. For entrepreneurs, educators and community organizations, that means technology that gives people more capacity and confidence.
-            </p>
-            <p className="text-ink/90 font-medium">Based in Missouri, we bring firsthand experience of the challenges facing small organizations and the communities they serve.</p>
+          <p className="mt-8 max-w-2xl font-body text-lg leading-relaxed text-ink/80">From big-company systems to tiny startup challenges, our work has taught us that great technology starts with understanding the lives and cultures of the people using it.</p>
+          <p className="mt-5 max-w-2xl font-body text-lg leading-relaxed text-ink/80">Our favorite projects let people spend less energy keeping things running and more energy being brilliant, creative and useful to one another.</p>
+          <div className="mt-9 border-t border-ink/20 pt-7">
+            <Link href="/who-we-are" className="inline-flex min-h-12 items-center gap-2 border-b border-teal-deep/50 font-body font-semibold text-teal-deep hover:border-teal-deep">
+              Meet the people behind Windrose <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
+            </Link>
           </div>
-          <Link href="/who-we-are" className="inline-flex items-center font-body font-semibold text-myrtle-green hover:text-teal-deep mt-6">
-            Meet the team
-            <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-          </Link>
-        </Reveal>
+        </div>
       </div>
-    </div>
-  </section>
-);
-
-export default FounderBand;
+    </section>
+  );
+}

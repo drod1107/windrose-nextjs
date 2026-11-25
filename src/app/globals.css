@@ -3,73 +3,52 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-body bg-gunmetal text-cream antialiased;
+  html { scroll-padding-top: 6rem; }
+  body { @apply bg-cream font-body text-ink antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display font-semibold tracking-tight; }
+  p { text-wrap: pretty; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  :where(a, button, input, textarea, select):focus-visible {
+    outline: 3px solid #D59D3C;
+    outline-offset: 4px;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-semibold leading-tight tracking-tight;
-  }
-  a {
-    @apply transition-colors duration-200;
-  }
-  /* Smooth in-page anchor jumps, but never fight the user's a11y prefs */
+  ::selection { background: #317873; color: #FFF7EC; }
   @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   }
 }
 
 @layer components {
-  /* Primary (teal) button */
-  .btn {
-    @apply inline-flex items-center justify-center font-body font-semibold bg-myrtle-green text-cream px-6 py-3 rounded-full transition-all duration-300 hover:bg-myrtle-green-light hover:-translate-y-0.5 hover:shadow-soft;
+  .container-content { @apply mx-auto max-w-content px-5 sm:px-8; }
+  .eyebrow { @apply inline-block font-body text-xs font-bold uppercase tracking-[0.2em] text-myrtle-green-light sm:text-sm; }
+  .btn, .btn-cta, .btn-secondary, .btn-ghost {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3.5 font-body text-sm font-bold leading-snug transition-all duration-200 sm:text-base;
   }
-  /* Secondary (earth) button */
-  .btn-secondary {
-    @apply inline-flex items-center justify-center font-body font-semibold bg-earth-yellow text-gunmetal px-6 py-3 rounded-full transition-all duration-300 hover:bg-palatinate hover:text-cream;
+  .btn { @apply bg-myrtle-green text-cream hover:bg-teal-deep; }
+  .btn-secondary { @apply bg-earth-yellow text-gunmetal hover:bg-gold-bright; }
+  .btn-cta { @apply bg-gold text-gunmetal-deep hover:bg-gold-bright hover:shadow-lift; }
+  .btn-ghost { @apply border border-cream/50 text-cream hover:border-cream hover:bg-cream/10; }
+  .cartographic-paper {
+    background-image:
+      radial-gradient(ellipse at 80% 8%, rgba(49,120,115,0.13), transparent 35%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 43px, rgba(36,94,89,0.042) 44px),
+      repeating-linear-gradient(90deg, transparent 0, transparent 43px, rgba(36,94,89,0.042) 44px);
   }
-  /* High-emphasis conversion CTA */
-  .btn-cta {
-    @apply inline-flex items-center justify-center font-body font-bold bg-gold text-gunmetal px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-gold-bright hover:-translate-y-0.5 hover:shadow-lift;
+  .technical-grid-windrose {
+    background-image: radial-gradient(circle at 80% 32%, rgba(117,217,230,.09), transparent 40%), repeating-linear-gradient(0deg, transparent 0, transparent 47px, rgba(117,217,230,.034) 48px), repeating-linear-gradient(90deg, transparent 0, transparent 47px, rgba(117,217,230,.034) 48px);
   }
-  /* Ghost / outline button for dark backgrounds */
-  .btn-ghost {
-    @apply inline-flex items-center justify-center font-body font-semibold border border-cream/40 text-cream px-7 py-3.5 rounded-full transition-all duration-300 hover:bg-cream/10 hover:border-cream;
-  }
-  /* Eyebrow / kicker label */
-  .eyebrow {
-    @apply inline-block font-body font-semibold uppercase tracking-[0.18em] text-sm text-myrtle-green-light;
-  }
-  /* Standard content gutter */
-  .container-content {
-    @apply max-w-content mx-auto px-5 sm:px-8;
-  }
+  .editorial-divider { @apply border-t border-ink/20; }
 }
 
 @layer utilities {
-  /* Scroll-reveal: hidden until .is-visible is toggled by IntersectionObserver */
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
+    transform: translateY(20px);
+    transition: opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1);
   }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-  }
-  /* Respect reduced-motion: show content immediately, no transforms */
+  .reveal.is-visible { opacity: 1; transform: none; }
   @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    .reveal.is-visible {
-      opacity: 1 !important;
-      transform: none !important;
-      transition: none !important;
-    }
-    .animate-float-slow {
-      animation: none !important;
-    }
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    .reveal, .reveal.is-visible { opacity: 1 !important; transform: none !important; }
   }
 }

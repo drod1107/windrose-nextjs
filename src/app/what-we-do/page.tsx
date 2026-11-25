@@ -1,38 +1,88 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Workflow, Code2, Users, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Code2, GraduationCap, HeartHandshake, Workflow } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import FinalCta from '../components/FinalCta';
 
 export const metadata: Metadata = {
-  title: 'Technology Consulting & AI Automation',
-  description: 'People-first AI automation, software development, technology consulting, business process architecture and AI governance for schools and small businesses.',
+  title: 'Services | People-first Technology Consulting',
+  description: 'Practical AI automation, technology systems, software development, and community capacity building from Windrose & Company.',
   alternates: { canonical: 'https://www.windroseandco.com/what-we-do' },
 };
 
-const services = [
-  { id: 'automation', title: 'AI & workflow automation', icon: Workflow, intro: 'Reclaim the time lost to repetitive work.', items: ['Process mapping and workflow redesign', 'AI-assisted customer communications and administrative work', 'Marketing and content workflows', 'Practical training, documentation and human review'] },
-  { id: 'systems', title: 'Technology & systems engineering', icon: Code2, intro: 'Build a reliable foundation for the next stage of your organization.', items: ['Custom software and websites', 'Systems integration and modernization', 'Digital records and document workflows', 'Technology assessment and implementation'] },
-  { id: 'community', title: 'Small business & community capacity', icon: Users, intro: 'Build systems that help entrepreneurs stay focused on their strengths and help community organizations support them.', items: ['Operational design for solopreneurs and growing teams', 'Administrative and event workflow improvements', 'Sales, marketing and customer-facing systems', 'Affordable, maintainable technology that fits your organization'] },
-  { id: 'education', title: 'AI governance & education', icon: ShieldCheck, intro: 'Help educators and leaders manage AI with confidence, safety and clear expectations.', items: ['AI policy and responsible-use guidance', 'Staff development and AI literacy', 'Safety procedures and incident response playbooks', 'Practical implementation support'] },
+const offerings = [
+  {
+    id: 'automation', no: '01', eyebrow: 'AI & automation', Icon: Workflow,
+    title: 'Give time back to the people doing the work.',
+    body: 'The most valuable hours in a small organization are rarely the ones spent copying data, chasing reminders, or keeping three tools in sync. We find the friction and build workflows that simplify it.',
+    examples: ['Operations and administrative automation', 'Practical AI-assisted workflows', 'Customer communication and follow-up systems'],
+  },
+  {
+    id: 'systems', no: '02', eyebrow: 'Technology & systems', Icon: Code2,
+    title: 'Make your tools work as a team.',
+    body: 'You should not have to design your day around disconnected software. We take a close look at how you work, then build, connect or improve the systems you depend on.',
+    examples: ['Custom websites and software', 'System integrations and process design', 'Digital records and information organization'],
+  },
+  {
+    id: 'schools', no: '03', eyebrow: 'AI safety & education', Icon: GraduationCap,
+    title: 'Make responsible progress possible.',
+    body: 'We support K-12 schools as they turn AI safety from a policy document into real understanding: useful guidance, staff confidence, student literacy, and ways to respond when something goes wrong.',
+    examples: ['AI acceptable-use and safety policy', 'Staff development and AI literacy', 'AI incident preparedness'],
+  },
+  {
+    id: 'community', no: '04', eyebrow: 'Community & small business', Icon: HeartHandshake,
+    title: 'Help the people helping others.',
+    body: 'Chambers, nonprofits and small-business ecosystems often have more ideas than capacity. We help build systems that make their limited time go further.',
+    examples: ['Small-business operations support', 'Community program technology', 'Practical workflows and communications'],
+  },
 ];
 
-export default function WhatWeDoPage() {
-  return <>
-    <PageHero eyebrow="Our services" title="Make technology work for your people." lead="We start with the work you actually do, the people doing it and the outcomes you want. Then we build the systems to help you get there." />
-    <section className="bg-cream text-ink py-20 lg:py-28">
-      <div className="container-content grid gap-6 md:grid-cols-2">
-        {services.map(({id, title, icon: Icon, intro, items}) => (
-          <article id={id} key={id} className="scroll-mt-28 rounded-xl2 bg-white border border-ink/10 p-8">
-            <Icon className="w-9 h-9 text-myrtle-green" aria-hidden="true" />
-            <h2 className="text-3xl text-gunmetal mt-5">{title}</h2>
-            <p className="font-body text-lg text-ink/75 mt-3">{intro}</p>
-            <ul className="list-disc pl-5 space-y-2 mt-5 font-body text-ink/80">{items.map(item => <li key={item}>{item}</li>)}</ul>
-            {id === 'education' && <Link href="/for-schools" className="inline-flex items-center gap-2 font-semibold text-myrtle-green mt-6">Explore the school program <ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>}
-          </article>
-        ))}
-      </div>
-    </section>
-    <FinalCta heading="Let's find your first opportunity." body="We'll help you identify a problem worth solving and a solution that fits your people, technology and budget." />
-  </>;
+export default function ServicesPage() {
+  return (
+    <>
+      <PageHero eyebrow="How we help" title="Good technology should make a difference you can feel." lead="We start with the work, not the tool. Together, we find what is getting in the way and build a better route forward." />
+      <section className="bg-cream py-16 text-ink sm:py-24">
+        <div className="container-content">
+          <div className="grid gap-6 border-b border-ink/20 pb-12 lg:grid-cols-12">
+            <span className="eyebrow text-teal-deep lg:col-span-3">The way we work</span>
+            <p className="max-w-[740px] font-display text-2xl leading-snug text-gunmetal-deep sm:text-3xl lg:col-span-9">Listen closely. Look at the whole system. Make the next step practical. Leave people more capable than we found them.</p>
+          </div>
+          {offerings.map(({id, no, eyebrow, Icon, title, body, examples}) => (
+            <article key={id} id={id} className="grid scroll-mt-28 gap-8 border-b border-ink/20 py-14 lg:grid-cols-12 lg:py-20">
+              <div className="lg:col-span-3">
+                <div className="flex items-center gap-4"><span className="font-body text-sm font-bold text-myrtle-green">{no} / 04</span><Icon className="h-7 w-7 text-teal-deep" aria-hidden="true" /></div>
+                <span className="eyebrow mt-6 text-teal-deep">{eyebrow}</span>
+              </div>
+              <div className="lg:col-span-6">
+                <h2 className="font-display text-3xl leading-snug text-gunmetal-deep sm:text-4xl">{title}</h2>
+                <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink/80">{body}</p>
+                {id === 'schools' && <Link href="/for-schools" className="mt-6 inline-flex items-center gap-2 font-body font-semibold text-teal-deep underline decoration-teal-deep/40 underline-offset-8 hover:decoration-teal-deep">Explore the school program <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>}
+              </div>
+              <div className="lg:col-span-3">
+                <h3 className="font-body text-xs font-bold uppercase tracking-widest text-teal-deep">What this can include</h3>
+                <ul className="mt-5 space-y-4">{examples.map(example => <li key={example} className="flex gap-3 font-body text-sm leading-relaxed text-ink/75"><ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-myrtle-green" aria-hidden="true" />{example}</li>)}</ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="bg-cloud py-16 text-ink sm:py-24">
+        <div className="container-content grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <span className="eyebrow text-teal-deep">Also in our wheelhouse</span>
+            <h2 className="mt-4 text-3xl text-gunmetal-deep sm:text-4xl">Practical help, in many forms.</h2>
+          </div>
+          <ul className="grid gap-x-10 sm:grid-cols-2 lg:col-span-8">
+            {['Software development', 'Technology consulting', 'Innovation consulting', 'Virtual assistance', 'Social media content and management', 'Paper document digitization'].map((capability, index) => (
+              <li key={capability} className="flex gap-4 border-t border-ink/20 py-5 font-body text-base font-medium text-ink/85">
+                <span className="text-sm font-bold text-myrtle-green">{String(index + 1).padStart(2, '0')}</span>
+                {capability}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <FinalCta heading="Let's solve the right problem first." body="Come with the challenge you are facing, even if you don't yet know what technology should do about it. That's a useful place to start." />
+    </>
+  );
 }

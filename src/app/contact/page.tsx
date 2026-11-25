@@ -1,84 +1,40 @@
-import { Metadata } from 'next';
-import { Linkedin, Clock, ShieldCheck, MessageSquare } from 'lucide-react';
+import type { Metadata } from 'next';
+import { ArrowUpRight, Linkedin, MapPin } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import LeadForm from '../components/LeadForm';
-import CalendarEmbed from '../components/CalendarEmbed';
-import Reveal from '../components/Reveal';
 import { siteConfig } from '../siteConfig';
 
 export const metadata: Metadata = {
-  title: 'Book a Consult',
+  title: 'Contact | Start a Conversation',
+  description: 'Connect with Windrose & Company about automation, systems, responsible AI and practical technology consulting.',
   alternates: { canonical: 'https://www.windroseandco.com/contact' },
-  description:
-    'Talk to Windrose & Company about practical technology, AI automation or AI governance. Book a free discovery call.',
-  openGraph: {
-    title: 'Book a Consult | Windrose & Company',
-    description:
-      'Talk to Windrose & Company about practical technology, AI automation or AI governance. Book a free discovery call.',
-    type: 'website',
-    url: 'https://www.windroseandco.com/contact',
-    images: [{ url: '/assets/img/windroselogo.png', width: 1200, height: 630, alt: 'Windrose & Company' }],
-  },
 };
-
-const expectations = [
-  { icon: <Clock className="w-5 h-5" aria-hidden="true" />, text: 'A focused 30-minute call — no sales pressure.' },
-  { icon: <MessageSquare className="w-5 h-5" aria-hidden="true" />, text: 'We identify your goals, constraints and most useful first step.' },
-  { icon: <ShieldCheck className="w-5 h-5" aria-hidden="true" />, text: 'You leave with clear next steps, whether or not we work together.' },
-];
 
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Let's talk"
-        title="Find a practical way forward."
-        lead="Whether you run a business, a school or a community organization, the first step is a conversation. Send a message or grab a time on our calendar."
-      >
-        <ul className="space-y-2.5">
-          {expectations.map((e) => (
-            <li key={e.text} className="flex items-center gap-3 font-body text-cream/85">
-              <span className="text-gold">{e.icon}</span>
-              {e.text}
-            </li>
-          ))}
-        </ul>
-      </PageHero>
-
-      <section className="bg-cream text-ink py-20 lg:py-28">
-        <div className="container-content">
-          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
-            {/* Intake form */}
-            <Reveal className="rounded-xl2 bg-white border border-ink/5 shadow-soft p-8">
-              <h2 className="text-2xl text-gunmetal">Send us a message</h2>
-              <p className="font-body text-ink/65 mt-2 mb-6">
-                Tell us a little about your organization and we&rsquo;ll be in touch within one
-                business day.
-              </p>
-              <LeadForm source="contact-page" />
-            </Reveal>
-
-            {/* Booking */}
-            <Reveal delay={120}>
-              <h2 className="text-2xl text-gunmetal">Or book a time now</h2>
-              <p className="font-body text-ink/65 mt-2 mb-6">
-                Pick a slot that works for you — it goes straight onto our calendar.
-              </p>
-              <CalendarEmbed />
-              <p className="font-body text-sm text-ink/60 mt-6">
-                Prefer LinkedIn?{' '}
-                <a
-                  href={siteConfig.linkedinUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-semibold text-myrtle-green hover:text-teal-deep"
-                >
-                  <Linkedin className="w-4 h-4" aria-hidden="true" />
-                  Connect with us
-                </a>
-              </p>
-            </Reveal>
+      <PageHero eyebrow="Get in touch" title="The best place to start is a conversation." lead="Tell us where things feel harder than they ought to be. We can talk through the problem before jumping to a solution." />
+      <section className="bg-cream py-20 text-ink sm:py-28">
+        <div className="container-content grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="eyebrow text-teal-deep">A practical first step</span>
+            <h2 className="mt-5 max-w-2xl text-3xl leading-snug text-gunmetal-deep sm:text-5xl">Come with a big idea, a stubborn problem, or a question.</h2>
+            <p className="mt-8 max-w-2xl font-body text-lg leading-relaxed text-ink/75">We work with small businesses, schools and community organizations. If a conversation reveals we are not the right fit, we will say so. We value your time, and we know you do too.</p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn-cta">Book a discovery call <ArrowUpRight className="ml-2 h-5 w-5" aria-hidden="true" /></a>
+              <a href={siteConfig.linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-2 border-b border-teal-deep/35 px-1 font-body font-semibold text-teal-deep hover:border-teal-deep"><Linkedin className="h-5 w-5" aria-hidden="true" /> Connect on LinkedIn</a>
+            </div>
           </div>
+          <aside className="bg-cloud p-8 sm:p-10 lg:col-span-5">
+            <span className="eyebrow text-teal-deep">Good to know</span>
+            <h3 className="mt-5 text-2xl text-gunmetal-deep">What can we talk about?</h3>
+            <ul className="mt-7 space-y-5 font-body text-ink/80">
+              <li className="border-t border-ink/15 pt-4">Tools that do not talk to each other</li>
+              <li className="border-t border-ink/15 pt-4">Repetitive tasks that eat up your week</li>
+              <li className="border-t border-ink/15 pt-4">Practical and responsible AI adoption</li>
+              <li className="border-t border-ink/15 pt-4">The next step for an organization ready to grow</li>
+            </ul>
+            <div className="mt-10 flex items-start gap-3 border-t border-ink/15 pt-7 font-body text-sm text-ink/70"><MapPin className="h-5 w-5 shrink-0 text-myrtle-green" aria-hidden="true" /> Based in {siteConfig.location}. Working beyond Missouri, too.</div>
+          </aside>
         </div>
       </section>
     </>
