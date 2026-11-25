@@ -7,6 +7,7 @@ import Reveal from '../components/Reveal';
 import { insights } from '../insightsData';
 
 export const metadata: Metadata = {
+  alternates: { canonical: 'https://www.windroseandco.com/insights' },
   title: 'Insights on AI in K-12 Schools',
   description:
     'Practical, plain-language answers for K-12 leaders on AI policy, teacher training, student safety, and the 2026 regulatory wave — from Windrose & Company.',

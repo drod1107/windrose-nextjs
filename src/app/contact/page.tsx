@@ -8,12 +8,13 @@ import { siteConfig } from '../siteConfig';
 
 export const metadata: Metadata = {
   title: 'Book a Consult',
+  alternates: { canonical: 'https://www.windroseandco.com/contact' },
   description:
-    'Talk to Windrose & Company about AI safety and policy for your K-12 district. Send a message or book a free discovery call — no obligation.',
+    'Talk to Windrose & Company about practical technology, AI automation or AI governance. Book a free discovery call.',
   openGraph: {
     title: 'Book a Consult | Windrose & Company',
     description:
-      'Talk to Windrose & Company about AI safety and policy for your K-12 district. Free discovery call, no obligation.',
+      'Talk to Windrose & Company about practical technology, AI automation or AI governance. Book a free discovery call.',
     type: 'website',
     url: 'https://www.windroseandco.com/contact',
     images: [{ url: '/assets/img/windroselogo.png', width: 1200, height: 630, alt: 'Windrose & Company' }],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 
 const expectations = [
   { icon: <Clock className="w-5 h-5" aria-hidden="true" />, text: 'A focused 30-minute call — no sales pressure.' },
-  { icon: <MessageSquare className="w-5 h-5" aria-hidden="true" />, text: 'We map where your district sits on the Readiness Matrix.' },
+  { icon: <MessageSquare className="w-5 h-5" aria-hidden="true" />, text: 'We identify your goals, constraints and most useful first step.' },
   { icon: <ShieldCheck className="w-5 h-5" aria-hidden="true" />, text: 'You leave with clear next steps, whether or not we work together.' },
 ];
 
@@ -31,8 +32,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Let's talk"
-        title="Book a consult for your district"
-        lead="Whether you need a board-ready AI policy, staff training, or a full program, the first step is a free discovery call. Send a message and we'll follow up — or grab a time on the calendar right away."
+        title="Find a practical way forward."
+        lead="Whether you run a business, a school or a community organization, the first step is a conversation. Send a message or grab a time on our calendar."
       >
         <ul className="space-y-2.5">
           {expectations.map((e) => (
@@ -51,7 +52,7 @@ export default function ContactPage() {
             <Reveal className="rounded-xl2 bg-white border border-ink/5 shadow-soft p-8">
               <h2 className="text-2xl text-gunmetal">Send us a message</h2>
               <p className="font-body text-ink/65 mt-2 mb-6">
-                Tell us a little about your district and we&rsquo;ll be in touch within one
+                Tell us a little about your organization and we&rsquo;ll be in touch within one
                 business day.
               </p>
               <LeadForm source="contact-page" />

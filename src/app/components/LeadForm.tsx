@@ -46,12 +46,8 @@ const LeadForm: React.FC<LeadFormProps> = ({
 
     try {
       if (!ENDPOINT) {
-        // Graceful capture path for the preview (no backend wired yet).
-        // eslint-disable-next-line no-console
-        console.info('[LeadForm] captured (no endpoint configured):', payload);
-        await new Promise((r) => setTimeout(r, 600));
-        setStatus('success');
-        form.reset();
+        setError('The form is temporarily unavailable. Please book a call instead.');
+        setStatus('error');
         return;
       }
 
@@ -95,7 +91,7 @@ const LeadForm: React.FC<LeadFormProps> = ({
   const gap = compact ? 'space-y-3' : 'space-y-4';
 
   return (
-    <form onSubmit={handleSubmit} className={gap} noValidate>
+    <form onSubmit={handleSubmit} className={gap}>
       {/* Honeypot (hidden from humans) */}
       <input
         type="text"
@@ -117,21 +113,21 @@ const LeadForm: React.FC<LeadFormProps> = ({
         <label htmlFor="lf-email" className="block font-body text-sm font-semibold text-ink mb-1.5">
           Email
         </label>
-        <input id="lf-email" name="email" type="email" required autoComplete="email" className={inputClass} placeholder="jane@yourdistrict.org" />
+        <input id="lf-email" name="email" type="email" required autoComplete="email" className={inputClass} placeholder="jane@yourbusiness.org" />
       </div>
 
       <div>
         <label htmlFor="lf-district" className="block font-body text-sm font-semibold text-ink mb-1.5">
-          District &amp; your role
+          Organization &amp; your role
         </label>
-        <input id="lf-district" name="district_role" type="text" required className={inputClass} placeholder="Springfield USD · Superintendent" />
+        <input id="lf-district" name="district_role" type="text" required className={inputClass} placeholder="Your organization and role" />
       </div>
 
       <div>
         <label htmlFor="lf-message" className="block font-body text-sm font-semibold text-ink mb-1.5">
           How can we help?
         </label>
-        <textarea id="lf-message" name="message" rows={compact ? 3 : 4} className={inputClass} placeholder="We need an AI policy before the school year starts…" />
+        <textarea id="lf-message" name="message" rows={compact ? 3 : 4} className={inputClass} placeholder="Tell us what you would like to accomplish" />
       </div>
 
       {status === 'error' && (

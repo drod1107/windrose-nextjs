@@ -9,6 +9,7 @@ import { siteConfig } from '../siteConfig';
 
 export const metadata: Metadata = {
   title: 'AI Safety & Policy for K-12 Schools',
+  alternates: { canonical: 'https://www.windroseandco.com/for-schools' },
   description:
     'Windrose & Company helps K-12 districts adopt a board-ready AI acceptable use policy, train staff, run student AI-literacy programs, and prepare for AI incidents — from compliance to culture.',
   openGraph: {

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Lock, Calendar, Check } from 'lucide-react';
+import Link from 'next/link';
 import PageHero from '../components/PageHero';
 import FinalCta from '../components/FinalCta';
 import Reveal from '../components/Reveal';
@@ -7,6 +8,7 @@ import { siteConfig } from '../siteConfig';
 
 export const metadata: Metadata = {
   title: 'Case Study: AI Safety in a Rural K-8 District',
+  alternates: { canonical: 'https://www.windroseandco.com/case-study' },
   description:
     'How Windrose & Company partnered with a small, rural Missouri K-8 district to deliver a custom AI policy, staff training, a student assembly, and an incident response playbook in a single semester.',
   openGraph: {
@@ -107,6 +109,7 @@ export default function CaseStudyPage() {
         </div>
       </section>
 
+      <div className="bg-cream text-ink pb-12"><div className="container-content"><Link href="/case-study/wintergarten" className="font-semibold text-myrtle-green">Explore our small business case study</Link></div></div>
       <FinalCta
         heading="Bring this to your district"
         body="What we built for one school, we can build for yours. Book a free discovery call to see what a program would look like for your district."

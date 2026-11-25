@@ -63,4 +63,3 @@ Host: https://www.windroseandco.com
 
 # Sitemaps
 Sitemap: https://www.windroseandco.com/sitemap.xml
-Sitemap: https://www.windroseandco.com/server-sitemap.xml

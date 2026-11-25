@@ -8,10 +8,11 @@ export interface NavbarItem {
   // Audience-first IA for the AI-safety-for-schools relaunch.
   // Existing routes are reused: /who-we-are = About, /what-we-do = Consulting.
   export const navbarItems: NavbarItem[] = [
+    { href: '/what-we-do', label: 'Services' },
     { href: '/for-schools', label: 'For Schools' },
-    { href: '/case-study', label: 'Case Study' },
+    { href: '/case-studies', label: 'Case Studies' },
     { href: '/insights', label: 'Insights' },
-    { href: '/resources', label: 'Resources' },
+
     { href: '/who-we-are', label: 'About' },
   ];
 
