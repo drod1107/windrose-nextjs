@@ -13,7 +13,7 @@ Windrose helps people reclaim attention and capability through better systems. T
 Home: distinctive value proposition -> four practical specialties -> real work -> founders -> conversation. Keep Services, For Schools, Case Studies, Insights, About, and Contact discoverable.
 
 ## Visual system
-- Keep recognizable Windrose colors: deep gunmetal, evergreen/teal, warm cream, restrained brass/gold.
+- Feedback revision: replace the heavy navy/teal/cream treatment with a bright, crisp, authoritative palette. Predominantly white and cool near-white surfaces, confident blue for navigation and actions, deep blue-gray typography, pale blue sections, and only sparing warm peach accents. Preserve compass identity without dark atmospheric fills.
 - Use an editorial, typography-led aesthetic: generous whitespace, large Lora headlines, readable Montserrat body, elegant section dividers, occasional small numerals.
 - Replace repeated generic card grids with asymmetric storytelling, deliberate rules, and compact specialty rows. Use the existing compass emblem as an abstract navigational anchor.
 - Use genuine founder photography already licensed to the business. Avoid introducing unlicensed third-party photography.

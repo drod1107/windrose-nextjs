@@ -10,33 +10,33 @@ const config: Config = {
     extend: {
       colors: {
         // --- Brand palette (kept for backwards compatibility) ---
-        'papaya-whip': '#FFEFD5',
-        'gunmetal': '#2B3D4F',
-        'myrtle-green': '#317873',
-        'myrtle-green-light': '#3D958F',
+        'papaya-whip': '#FBF6F2',
+        'gunmetal': '#254357',
+        'myrtle-green': '#1766A1',
+        'myrtle-green-light': '#1766A1',
         'palatinate': '#682860',
-        'earth-yellow': '#E1A95F',
+        'earth-yellow': '#E3A477',
 
         // --- Evolved semantic tokens (2026 relaunch) ---
         // Deep bases for dark sections + gradients
-        'gunmetal-deep': '#1E2C3A',
-        'ink': '#22303C',
+        'gunmetal-deep': '#19384C',
+        'ink': '#253D4F',
         // Primary (teal) family
-        'teal-deep': '#245E59',
+        'teal-deep': '#155A8A',
         // Bright, saturated CTA accent
-        'gold': '#EBB24E',
-        'gold-bright': '#F4C065',
+        'gold': '#D99168',
+        'gold-bright': '#F1B38C',
         // Light surfaces for airy, readable content sections
-        'cream': '#FFF7EC',
-        'cloud': '#F3EFE6',
-        'mist': '#E7EFEE',
+        'cream': '#FFFFFF',
+        'cloud': '#F3F8FC',
+        'mist': '#E9F2F9',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'var(--font-saira)', 'sans-serif'],
         serif: ['var(--font-lora)', 'var(--font-saira)', 'serif'],
         // Display headings + UI/body pairing for the relaunch
-        display: ['var(--font-lora)', 'serif'],
-        body: ['var(--font-montserrat)', 'sans-serif'],
+        display: ['var(--font-inter)', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
         saira: ['var(--font-saira)', 'sans-serif'],
         lora: ['var(--font-lora)', 'serif'],
         hind: ['var(--font-hind)', 'sans-serif'],
@@ -50,8 +50,8 @@ const config: Config = {
         '4xl': '2rem',
       },
       boxShadow: {
-        'soft': '0 10px 40px -12px rgba(16, 30, 40, 0.35)',
-        'lift': '0 24px 60px -20px rgba(16, 30, 40, 0.45)',
+        'soft': '0 10px 38px -20px rgba(28, 75, 115, 0.19)',
+        'lift': '0 20px 48px -22px rgba(28, 75, 115, 0.24)',
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',

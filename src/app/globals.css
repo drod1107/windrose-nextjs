@@ -9,10 +9,10 @@
   p { text-wrap: pretty; }
   a, button { -webkit-tap-highlight-color: transparent; }
   :where(a, button, input, textarea, select):focus-visible {
-    outline: 3px solid #D59D3C;
+    outline: 3px solid #1766A1;
     outline-offset: 4px;
   }
-  ::selection { background: #317873; color: #FFF7EC; }
+  ::selection { background: #1766A1; color: #FFFFFF; }
   @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
   }
@@ -22,20 +22,20 @@
   .container-content { @apply mx-auto max-w-content px-5 sm:px-8; }
   .eyebrow { @apply inline-block font-body text-xs font-bold uppercase tracking-[0.2em] text-myrtle-green-light sm:text-sm; }
   .btn, .btn-cta, .btn-secondary, .btn-ghost {
-    @apply inline-flex min-h-12 items-center justify-center rounded-full px-7 py-3.5 font-body text-sm font-bold leading-snug transition-all duration-200 sm:text-base;
+    @apply inline-flex min-h-12 items-center justify-center rounded-lg px-7 py-3.5 font-body text-sm font-semibold leading-snug transition-all duration-200 sm:text-base;
   }
   .btn { @apply bg-myrtle-green text-cream hover:bg-teal-deep; }
-  .btn-secondary { @apply bg-earth-yellow text-gunmetal hover:bg-gold-bright; }
-  .btn-cta { @apply bg-gold text-gunmetal-deep hover:bg-gold-bright hover:shadow-lift; }
-  .btn-ghost { @apply border border-cream/50 text-cream hover:border-cream hover:bg-cream/10; }
+  .btn-secondary { @apply bg-mist text-teal-deep hover:bg-cloud; }
+  .btn-cta { @apply bg-myrtle-green text-white shadow-sm hover:bg-teal-deep hover:shadow-soft; }
+  .btn-ghost { @apply border border-teal-deep/30 text-teal-deep hover:border-teal-deep hover:bg-mist; }
   .cartographic-paper {
     background-image:
-      radial-gradient(ellipse at 80% 8%, rgba(49,120,115,0.13), transparent 35%),
-      repeating-linear-gradient(0deg, transparent 0, transparent 43px, rgba(36,94,89,0.042) 44px),
+      radial-gradient(ellipse at 80% 8%, rgba(91,169,217,0.11), transparent 35%),
+      repeating-linear-gradient(0deg, transparent 0, transparent 43px, rgba(23,102,161,0.032) 44px),
       repeating-linear-gradient(90deg, transparent 0, transparent 43px, rgba(36,94,89,0.042) 44px);
   }
   .technical-grid-windrose {
-    background-image: radial-gradient(circle at 80% 32%, rgba(117,217,230,.09), transparent 40%), repeating-linear-gradient(0deg, transparent 0, transparent 47px, rgba(117,217,230,.034) 48px), repeating-linear-gradient(90deg, transparent 0, transparent 47px, rgba(117,217,230,.034) 48px);
+    background-image: radial-gradient(circle at 82% 30%, rgba(121,188,230,.20), transparent 39%), radial-gradient(circle at 92% 94%, rgba(239,176,130,.08), transparent 25%), repeating-linear-gradient(0deg, transparent 0, transparent 47px, rgba(23,102,161,.025) 48px), repeating-linear-gradient(90deg, transparent 0, transparent 47px, rgba(23,102,161,.025) 48px);
   }
   .editorial-divider { @apply border-t border-ink/20; }
 }

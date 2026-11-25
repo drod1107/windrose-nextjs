@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 const TermsOfServicePage = () => {
   return (
-    <div className="min-h-screen bg-gunmetal py-16 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+    <div className="min-h-screen bg-cloud pb-20 pt-36 px-4 sm:px-6 lg:px-8 flex justify-center">
       <div className="w-full max-w-4xl">
-        <div className="relative rounded-xl shadow-2xl overflow-hidden">
+        <div className="relative rounded-xl border border-[#DBE8F1] bg-white shadow-soft overflow-hidden">
           {/* Glassmorphism background */}
-          <div className="absolute inset-0 bg-gunmetal bg-opacity-60 backdrop-filter backdrop-blur-md z-0"></div>
+          <div className="absolute inset-0 bg-white z-0"></div>
           
           {/* Content */}
           <div className="relative z-10 p-8 md:p-12">
             <h1 className="text-3xl font-bold text-myrtle-green mb-8">Terms of Service</h1>
-            <div className="space-y-6 text-papaya-whip">
+            <div className="space-y-6 text-ink/85">
               <p>
                 Welcome to Windrose & Company. By using our website and services, you agree to comply with and be bound by the following terms and conditions of use. Please review these terms carefully.
               </p>
