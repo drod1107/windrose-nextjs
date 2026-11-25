@@ -13,16 +13,16 @@ Windrose helps people reclaim attention and capability through better systems. T
 Home: distinctive value proposition -> four practical specialties -> real work -> founders -> conversation. Keep Services, For Schools, Case Studies, Insights, About, and Contact discoverable.
 
 ## Visual system
-- Feedback revision: replace the heavy navy/teal/cream treatment with a bright, crisp, authoritative palette. Predominantly white and cool near-white surfaces, confident blue for navigation and actions, deep blue-gray typography, pale blue sections, and only sparing warm peach accents. Preserve compass identity without dark atmospheric fills.
-- Use an editorial, typography-led aesthetic: generous whitespace, large Lora headlines, readable Montserrat body, elegant section dividers, occasional small numerals.
+- APPROVED DIRECTION, November 25: SIGNAL. White #FFFFFF, near-black #191C1A, acid chartreuse #D9F65B, restrained coral #EF7367, cool neutral #EFF1EC. High-contrast black type on white or lime, lively chartreuse accents, and coral only for small graphic markers. Avoid blue, teal, brown, cream and gloomy full-page dark backgrounds.
+- Swiss modernist hierarchy: assertive Inter typography, tight purposeful tracking, black hairline rules, oversized feature headlines, lime emphasis blocks, bold index numerals, and carefully placed coral geometry.
 - Replace repeated generic card grids with asymmetric storytelling, deliberate rules, and compact specialty rows. Use the existing compass emblem as an abstract navigational anchor.
 - Use genuine founder photography already licensed to the business. Avoid introducing unlicensed third-party photography.
 - Add considered microinteractions only where they help; honor reduced-motion preferences.
 
 ## Work packages
 A. Global design and accessibility: reusable tokens, meaningful focus states, readable measure/spacing, skip-to-content, touch targets, polished header/footer, and responsive behavior.
-B. Homepage: editorial hero with typographic emphasis and compass field; four specialties as a scan-friendly list; two authentic case-study narratives; grounded founder story; strong but low-pressure CTA.
-C. Interior pages: rework Services, About, Contact and shared page hero/closing CTA to harmonize with the new design. Preserve educational assets, blog URLs, privacy/terms, indexing and metadata.
+B. Homepage: asymmetric SIGNAL hero with lime-highlighted headline, black compass-method graphic, four specialties in high-contrast indexed rows, two authentic case-study narratives, grounded founder story, and a clear low-pressure CTA.
+C. Interior pages: harmonize Services, About, Contact, Cases, K-12 readiness and urgency, legal pages, shared page hero/closing CTA with SIGNAL surfaces, color tokens and contrast. Preserve educational assets, blog URLs, privacy/terms, indexing and metadata.
 D. Quality: verify all routes, navigation, CTA links, responsive layouts, keyboard operation, readable contrast, and build.
 
 ## Source and policy verification
@@ -38,3 +38,6 @@ Use W3C WCAG 2.2 AA as an accessibility target (not a claim of certification); f
 
 ## Acceptance and release
 Commit on design/editorial-people-first-20261125, run install/build/TypeScript/lint and route smoke tests, deploy a non-production Vercel preview, and verify the preview. Share preview URL and concise changes with user. Incorporate user feedback in that branch and only merge/deploy production after explicit approval.
+
+## SIGNAL review round
+User selected direction 01 after rejecting generic blue/teal/neutral systems. This iteration prioritizes personality and crisp professional authority. Keep portfolio content and Windrose & Company content separate. This remains a preview-only change; no production merge without explicit approval.

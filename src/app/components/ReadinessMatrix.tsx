@@ -4,7 +4,7 @@ import { matrixStages } from '../schoolsData';
 import Reveal from './Reveal';
 
 const ReadinessMatrix: React.FC = () => (
-  <section className="border-y border-[#DCE9F1] bg-[#F3F8FC] py-20 text-ink lg:py-28">
+  <section className="border-y border-[#D9DDD3] bg-[#EFF1EC] py-20 text-ink lg:py-28">
     <div className="container-content">
       <Reveal className="max-w-2xl">
         <span className="eyebrow text-teal-deep">Our framework</span>
@@ -19,7 +19,7 @@ const ReadinessMatrix: React.FC = () => (
       <div className="mt-12 grid gap-5 md:grid-cols-3">
         {matrixStages.map((stage, i) => (
           <Reveal key={stage.level} delay={i * 110}
-            className="relative rounded-xl2 border border-[#D8E7F1] bg-white p-7 shadow-sm">
+            className="relative rounded-xl2 border border-[#D9DDD3] bg-white p-7 shadow-sm">
             <div className="flex items-baseline justify-between">
               <span className="font-display text-4xl font-semibold text-myrtle-green">{stage.level}</span>
               {i < matrixStages.length - 1 && (

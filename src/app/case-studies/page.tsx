@@ -18,7 +18,7 @@ export default function CaseStudiesPage() {
       <section className="bg-cream py-20 text-ink sm:py-28">
         <div className="container-content">
           <div className="grid gap-10 border-b border-ink/20 pb-16 lg:grid-cols-12 lg:items-center">
-            <div className="relative grid min-h-[320px] place-items-center overflow-hidden bg-[#E8F3FB] lg:col-span-5" aria-hidden="true">
+            <div className="relative grid min-h-[320px] place-items-center overflow-hidden bg-signal-fog lg:col-span-5" aria-hidden="true">
               <CompassRose className="h-64 w-64 text-myrtle-green/25" />
               <span className="absolute bottom-7 left-8 font-body text-xs font-bold uppercase tracking-[0.2em] text-teal-deep">Education / 01</span>
             </div>
@@ -36,7 +36,7 @@ export default function CaseStudiesPage() {
               <p className="mt-6 max-w-xl font-body text-lg leading-relaxed text-ink/80">Our own cottage bakery is a working example of practical AI-assisted development, integrated business systems and automation that support an owner-operated venture.</p>
               <Link href="/case-study/wintergarten" className="mt-8 inline-flex min-h-12 items-center gap-2 border-b border-teal-deep/40 font-body font-semibold text-teal-deep hover:border-teal-deep">Explore the Wintergarten case study <ArrowUpRight className="h-4 w-4" aria-hidden="true" /></Link>
             </article>
-            <div className="relative grid min-h-[320px] place-items-center overflow-hidden bg-[#FFF7F1] lg:col-span-5" aria-hidden="true">
+            <div className="relative grid min-h-[320px] place-items-center overflow-hidden bg-[#FFFDFB] lg:col-span-5" aria-hidden="true">
               <div className="absolute inset-0 cartographic-paper opacity-50" />
               <span className="relative font-display text-[clamp(3.5rem,8vw,8rem)] italic leading-none text-teal-deep/75">W.</span>
               <span className="absolute bottom-7 left-8 font-body text-xs font-bold uppercase tracking-[0.2em] text-gunmetal">Small business / 02</span>

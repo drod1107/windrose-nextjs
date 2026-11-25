@@ -14,37 +14,39 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#E0EAF1] bg-white py-16 text-ink sm:py-20">
+    <footer className="bg-signal-black py-16 text-white sm:py-20">
       <div className="container-content">
-        <div className="grid gap-12 border-b border-[#E0EAF1] pb-14 lg:grid-cols-12">
+        <div className="grid gap-12 border-b border-white/25 pb-14 lg:grid-cols-12">
           <div className="lg:col-span-6">
             <Link href="/" className="inline-flex items-center gap-3" aria-label="Windrose & Company home">
-              <Image src="/assets/img/windroselogo.png" width={52} height={52} alt="" className="h-12 w-auto" />
-              <span className="font-display text-xl font-semibold text-gunmetal-deep sm:text-2xl">Windrose &amp; Company</span>
+              <span className="grid h-12 w-12 place-items-center bg-signal-lime">
+                <Image src="/assets/img/windroselogo.png" width={42} height={42} alt="" className="h-10 w-auto saturate-0 mix-blend-multiply" />
+              </span>
+              <span className="font-display text-xl font-extrabold tracking-tight text-white sm:text-2xl">WINDROSE &amp; COMPANY</span>
             </Link>
-            <p className="mt-6 max-w-sm font-display text-xl font-semibold leading-snug text-gunmetal-deep sm:text-2xl">Better systems. More human work.</p>
-            <p className="mt-4 max-w-md font-body text-sm leading-relaxed text-ink/70">{siteConfig.location} · Working with organizations everywhere.</p>
+            <p className="mt-7 max-w-sm font-display text-2xl font-semibold leading-snug text-white sm:text-3xl">Better systems.<br /><span className="text-signal-lime">More human work.</span></p>
+            <p className="mt-5 max-w-md font-body text-sm leading-relaxed text-white/70">{siteConfig.location} · Working with organizations everywhere.</p>
           </div>
           <div className="lg:col-span-3">
-            <h2 className="eyebrow text-teal-deep">Find your way</h2>
+            <h2 className="signal-overline text-signal-lime">Find your way</h2>
             <ul className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 font-body text-sm lg:grid-cols-1">
-              {links.map(({href,label}) => <li key={href}><Link href={href} className="text-ink/80 hover:text-teal-deep">{label}</Link></li>)}
+              {links.map(({href,label}) => <li key={href}><Link href={href} className="text-white/85 hover:text-signal-lime">{label}</Link></li>)}
             </ul>
           </div>
           <div className="lg:col-span-3">
-            <h2 className="eyebrow text-teal-deep">Start a conversation</h2>
-            <p className="mt-5 max-w-xs font-body text-sm leading-relaxed text-ink/75">No complicated pitch. Just a conversation about what you are trying to make better.</p>
-            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 border-b border-teal-deep/60 font-body font-semibold text-teal-deep hover:border-teal-deep">
+            <h2 className="signal-overline text-signal-lime">Start a conversation</h2>
+            <p className="mt-5 max-w-xs font-body text-sm leading-relaxed text-white/80">No complicated pitch. Just a conversation about what you are trying to make better.</p>
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 border-b-2 border-signal-lime font-body font-semibold text-white hover:text-signal-lime">
               Book a consult <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-5 pt-7 font-body text-sm text-ink/65 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-5 pt-7 font-body text-sm text-white/65 md:flex-row md:items-center md:justify-between">
           <p>&copy; {new Date().getFullYear()} Windrose &amp; Company. Built around people.</p>
           <nav aria-label="Legal and contact" className="flex flex-wrap gap-x-6 gap-y-3">
-            <Link href="/privacy-policy" className="hover:text-teal-deep">Privacy</Link>
-            <Link href="/terms-of-service" className="hover:text-teal-deep">Terms</Link>
-            <Link href="/contact" className="hover:text-teal-deep">Contact</Link>
+            <Link href="/privacy-policy" className="hover:text-signal-lime">Privacy</Link>
+            <Link href="/terms-of-service" className="hover:text-signal-lime">Terms</Link>
+            <Link href="/contact" className="hover:text-signal-lime">Contact</Link>
           </nav>
         </div>
       </div>

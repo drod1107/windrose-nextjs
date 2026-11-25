@@ -11,7 +11,7 @@ const TermsOfServicePage = () => {
   return (
     <div className="min-h-screen bg-cloud pb-20 pt-36 px-4 sm:px-6 lg:px-8 flex justify-center">
       <div className="w-full max-w-4xl">
-        <div className="relative rounded-xl border border-[#DBE8F1] bg-white shadow-soft overflow-hidden">
+        <div className="relative rounded-xl border border-[#D9DDD3] bg-white shadow-soft overflow-hidden">
           {/* Glassmorphism background */}
           <div className="absolute inset-0 bg-white z-0"></div>
           

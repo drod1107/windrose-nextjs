@@ -9,7 +9,7 @@ const stats = [
 ];
 
 const UrgencyBand: React.FC = () => (
-  <section className="border-y border-[#D8E8F2] bg-[#EAF4FA] py-14 text-gunmetal-deep">
+  <section className="border-y border-signal-black bg-signal-lime py-14 text-signal-black">
     <div className="container-content">
       <Reveal className="flex items-center gap-3 text-teal-deep">
         <TrendingUp className="h-5 w-5" aria-hidden="true" />

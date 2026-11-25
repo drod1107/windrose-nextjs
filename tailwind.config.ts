@@ -10,26 +10,32 @@ const config: Config = {
     extend: {
       colors: {
         // --- Brand palette (kept for backwards compatibility) ---
-        'papaya-whip': '#FBF6F2',
-        'gunmetal': '#254357',
-        'myrtle-green': '#1766A1',
-        'myrtle-green-light': '#1766A1',
-        'palatinate': '#682860',
-        'earth-yellow': '#E3A477',
+        'signal-black': '#191C1A',
+        'signal-lime': '#D9F65B',
+        'signal-coral': '#EF7367',
+        'signal-fog': '#EFF1EC',
+        'signal-paper': '#FFFFFF',
+        'signal-muted': '#555B54',
+        'papaya-whip': '#FFFFFF',
+        'gunmetal': '#272A26',
+        'myrtle-green': '#353B30',
+        'myrtle-green-light': '#34392F',
+        'palatinate': '#403F3A',
+        'earth-yellow': '#EF7367',
 
         // --- Evolved semantic tokens (2026 relaunch) ---
         // Deep bases for dark sections + gradients
-        'gunmetal-deep': '#19384C',
-        'ink': '#253D4F',
+        'gunmetal-deep': '#191C1A',
+        'ink': '#1C201D',
         // Primary (teal) family
-        'teal-deep': '#155A8A',
+        'teal-deep': '#30392F',
         // Bright, saturated CTA accent
-        'gold': '#D99168',
-        'gold-bright': '#F1B38C',
+        'gold': '#D9F65B',
+        'gold-bright': '#CBE84C',
         // Light surfaces for airy, readable content sections
         'cream': '#FFFFFF',
-        'cloud': '#F3F8FC',
-        'mist': '#E9F2F9',
+        'cloud': '#EFF1EC',
+        'mist': '#F7F8F4',
       },
       fontFamily: {
         sans: ['var(--font-montserrat)', 'var(--font-saira)', 'sans-serif'],
@@ -50,8 +56,8 @@ const config: Config = {
         '4xl': '2rem',
       },
       boxShadow: {
-        'soft': '0 10px 38px -20px rgba(28, 75, 115, 0.19)',
-        'lift': '0 20px 48px -22px rgba(28, 75, 115, 0.24)',
+        'soft': '0 10px 36px -22px rgba(25, 28, 26, 0.18)',
+        'lift': '0 20px 48px -22px rgba(25, 28, 26, 0.24)',
       },
       textShadow: {
         'default': '2px 2px 4px rgba(0, 0, 0, 0.5)',
