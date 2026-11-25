@@ -9,13 +9,13 @@ import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.windroseandco.com"),
   title: {
-    default: "Windrose & Company | AI Safety & Policy for K-12 Schools",
+    default: "Windrose & Company | People-First Technology & AI Consulting",
     template: "%s | Windrose & Company"
   },
   description:
-    "Windrose & Company helps U.S. K-12 districts create board-ready AI policies, train staff, and run student AI-safety programs — taking schools from compliance to culture.",
+    "People-first technology consulting, AI automation and software development for businesses, schools and community organizations.",
   keywords: [
-    "AI policy for schools",
+    "AI automation for small business", "technology consulting Missouri", "business process automation", "AI policy for schools",
     "K-12 AI safety",
     "AI acceptable use policy",
     "school AI consulting",
@@ -23,18 +23,18 @@ export const metadata: Metadata = {
     "teacher AI training",
   ],
   openGraph: {
-    title: "Windrose & Company | AI Safety & Policy for K-12 Schools",
+    title: "Windrose & Company | People-First Technology & AI Consulting",
     description:
-      "Board-ready AI policy, staff training, and student programs for K-12 districts. From compliance to culture.",
+      "Practical technology and AI solutions that help businesses, schools and community organizations grow.",
     type: "website",
     url: "https://www.windroseandco.com",
     images: [{ url: "/assets/img/windroselogo.png", width: 1200, height: 630, alt: "Windrose & Company" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Windrose & Company | AI Safety & Policy for K-12 Schools",
+    title: "Windrose & Company | People-First Technology & AI Consulting",
     description:
-      "Board-ready AI policy, staff training, and student programs for K-12 districts.",
+      "Practical technology and AI solutions that help businesses, schools and community organizations grow.",
     images: ["/assets/img/windroselogo.png"],
   },
 };
@@ -56,7 +56,7 @@ export default function RootLayout({
               name: "Windrose & Company",
               url: "https://www.windroseandco.com",
               description:
-                "AI safety, policy, and integration consulting for U.S. K-12 school districts.",
+                "Technology consulting, AI automation, software development and AI governance for businesses and community organizations.",
               areaServed: "United States",
               address: {
                 "@type": "PostalAddress",
