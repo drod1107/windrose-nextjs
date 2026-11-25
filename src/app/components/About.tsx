@@ -1,3 +1,4 @@
+import { siteConfig } from '../siteConfig';
 import React from 'react';
 import Image from "next/image";
 import CustomButton from './CustomButton';
@@ -48,7 +49,7 @@ const About: React.FC = () => (
             <div className="mt-10 text-center">
               <CustomButton
                 text="Book an appointment"
-                url="https://calendar.google.com/calendar/appointments/schedules/AcZssZ23UWilO1cd2IM1uSQqE1jCSEgHav1XImda-cfXJDH5FW-AuMgyz1xFH27IsAaTBn-4ZOPVsU7F?gv=true"
+                url={siteConfig.bookingUrl}
                 buttonStyle="bg-earth-yellow hover:bg-myrtle-green-light"
                 newTab={true}
                 className="text-gunmetal font-saira font-bold text-lg px-8 py-3 rounded-full transition duration-300 ease-in-out"
